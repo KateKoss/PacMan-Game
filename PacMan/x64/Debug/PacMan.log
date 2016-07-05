@@ -1,0 +1,20 @@
+﻿  main.cpp
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(31): warning C4244: 'initializing': conversion from 'sf::Int64' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(37): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(40): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(51): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(57): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(60): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(79): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(87): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(93): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(99): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(102): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(107): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman\pacman\pacman\main.cpp(113): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  PacMan.vcxproj -> C:\Users\Людмила\Documents\GitHub\PacMan\PacMan\x64\Debug\PacMan.exe
+  PacMan.vcxproj -> C:\Users\Людмила\Documents\GitHub\PacMan\PacMan\x64\Debug\PacMan.pdb (Full PDB)
