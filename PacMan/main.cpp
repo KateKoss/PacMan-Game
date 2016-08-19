@@ -126,7 +126,6 @@ int main(int argc, char *argv[])
 	mapSprite.setTexture(mapTexture);
 	mapSprite.setTextureRect(IntRect(614, 20, 16, 16));//607, 21, 16, 16//ts.width, ts.height
 	
-	//Hello Kate
 	Clock clock;
 
 	RectangleShape rectangle(Vector2f(ts.width, ts.height));
@@ -237,7 +236,6 @@ int main(int argc, char *argv[])
 				}
 				if (TileMap[i][j] == ' ')
 				{
-					//continue;
 					rectangle.setFillColor(Color::Black);	
 				}
 					
@@ -247,7 +245,6 @@ int main(int argc, char *argv[])
 				}
 				rectangle.setPosition(j * ts.width, i * ts.height);
 				window.draw(rectangle);
-				
 			}
 		}
 		
