@@ -1,7 +1,8 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 using namespace sf;
 
-const int H = 22;
+const int H = 22;//22 19
 const int W = 19;
 //0 - стенка
 String TileMap[H] = {
@@ -38,22 +39,20 @@ struct TileSize
 
 struct PlayerSize
 {
-	int width = 12;
-	int height = 15;
+	int width = 12;//12
+	int height = 15;//15
 };
 
 TileSize ts;
 PlayerSize ps;
 
 float dx = 0.1, dy = 0.1; 
-//координати персонажа
-float X = 17, Y = 17;
+float X = 17, Y = 17;	//координати персонажа
 
 float currentFrame = 0;
 
 void Collision(int dir)
-{
-	
+{	
 	if ((Y / ts.height) > 0 && (X / ts.width) > 0)
 	{
 		for (int i = Y / ts.height; i < (Y + ps.height) / ts.height; i++)
@@ -61,12 +60,14 @@ void Collision(int dir)
 			{
 				if (TileMap[i][j] == '0')
 				{
-					if (dx > 0 && dir == 0)
+					//если dir == 0 то мы двигаемся по оси 0Х
+					if (dx > 0 && dir == 0)		
 						X = j * ts.width - ps.width;
 
 					if (dx < 0 && dir == 0)
 						X = j * ts.width + ts.width;						
 
+					//если dir == 1 то мы двигаемся по оси 0Х
 					if (dy > 0 && dir == 1)
 					{
 						Y = i * ts.height - ps.height;
@@ -82,7 +83,6 @@ void Collision(int dir)
 				{
 					TileMap[i][j] = 'e';
 				}
-
 			}
 	}
 }
@@ -100,7 +100,7 @@ void update(float time)
 	dx = 0;
 }
 
-int main()
+int main(int argc, char *argv[])
 {
 	RenderWindow window(sf::VideoMode(W*ts.width, H*ts.height), "PacMan"); //,Style::Fullscreen
 	Image heroImage;
@@ -108,7 +108,6 @@ int main()
 	
 	Texture heroTexture;
 	heroTexture.loadFromImage(heroImage);
-
 	Texture t;
 	t.loadFromFile("images/Map.png");
 
@@ -118,8 +117,14 @@ int main()
 	s.setPosition(0, 4);
 	
 	heroSprite.setTexture(heroTexture);
-	heroSprite.setTextureRect(IntRect(455, 0, 12, 15));
+	heroSprite.setTextureRect(IntRect(455, 0, ps.width, ps.height));
 	heroSprite.setPosition(X, Y);
+	
+	Texture mapTexture;
+	mapTexture.loadFromFile("images/Pac_Man_Sprites1.png");
+	Sprite mapSprite;	
+	mapSprite.setTexture(mapTexture);
+	mapSprite.setTextureRect(IntRect(614, 20, 16, 16));//607, 21, 16, 16//ts.width, ts.height
 	
 	//Hello Kate
 	Clock clock;
@@ -146,19 +151,16 @@ int main()
 			currentFrame += 0.005*time; //служит для прохождения по "кадрам". переменная доходит до двухх суммируя произведение времени и скорости. изменив 0.005 можно изменить скорость анимации
 			if (currentFrame > 0 && currentFrame <= 1)
 			{
-				//heroSprite.move(-0.1 * time, 0);
-				heroSprite.setTextureRect(IntRect(460, 16, 12, 15));				
+				heroSprite.setTextureRect(IntRect(461, 17, 9, 13));				
 			}
 			else if (currentFrame > 1 && currentFrame <= 2)
 			{
-				//heroSprite.move(-0.1 * time, 0);
-				heroSprite.setTextureRect(IntRect(472, 16, 15, 15));				
+				heroSprite.setTextureRect(IntRect(474, 17, 13, 13));				
 			}
 			else if (currentFrame > 2)
 			{
 				currentFrame -= 2; // если пришли к второму кадру - откидываемся назад.	
-				//heroSprite.move(-0.1 * time, 0);
-				heroSprite.setTextureRect(IntRect(460, 16, 12, 15));
+				heroSprite.setTextureRect(IntRect(461, 17, 9, 13));
 			}
 			dx = -0.1;
 			dy = 0;
@@ -168,19 +170,16 @@ int main()
 			currentFrame += 0.005*time; //служит для прохождения по "кадрам". переменная доходит до двухх суммируя произведение времени и скорости. изменив 0.005 можно изменить скорость анимации
 			if (currentFrame > 0 && currentFrame <= 1)
 			{
-				//heroSprite.move(0.1 * time, 0);
-				heroSprite.setTextureRect(IntRect(455, 0, 12, 15));
+				heroSprite.setTextureRect(IntRect(457, 1, 9, 13));
 			}
 			else if (currentFrame > 1 && currentFrame <= 2)
 			{
-				//heroSprite.move(0.1 * time, 0);
-				heroSprite.setTextureRect(IntRect(473, 0, 15, 15));
+				heroSprite.setTextureRect(IntRect(472, 1, 13, 13));
 			}
 			else if (currentFrame > 2)
 			{
 				currentFrame -= 2; // если пришли к второму кадру - откидываемся назад.	
-				//heroSprite.move(0.1 * time, 0);
-				heroSprite.setTextureRect(IntRect(455 * int(currentFrame), 0, 12, 15));
+				heroSprite.setTextureRect(IntRect(457, 1, 9, 13));
 			}
 			dx = 0.1;
 			dy = 0;
@@ -190,19 +189,16 @@ int main()
 			currentFrame += 0.005*time;
 			if (currentFrame > 0 && currentFrame <= 1)
 			{
-				//heroSprite.move(0, -0.1 * time);
-				heroSprite.setTextureRect(IntRect(456, 36, 15, 12));
+				heroSprite.setTextureRect(IntRect(457, 37, 13, 9));
 			}
 			else if (currentFrame > 1 && currentFrame <= 2)
 			{
-				//heroSprite.move(0, -0.1 * time);
-				heroSprite.setTextureRect(IntRect(473, 33, 15, 15));
+				heroSprite.setTextureRect(IntRect(473, 34, 13, 13));
 			}
 			else if (currentFrame > 2)
 			{
 				currentFrame -= 2;
-				//heroSprite.move(0, -0.1 * time);
-				heroSprite.setTextureRect(IntRect(456, 36, 15, 12));
+				heroSprite.setTextureRect(IntRect(457, 37, 13, 9));
 			}
 			dy = -0.1;
 			dx = 0;
@@ -212,19 +208,16 @@ int main()
 			currentFrame += 0.005*time;
 			if (currentFrame > 0 && currentFrame <= 1)
 			{
-				//heroSprite.move(0, 0.1 * time);
-				heroSprite.setTextureRect(IntRect(456, 48, 15, 12));
+				heroSprite.setTextureRect(IntRect(457, 49, 13, 9));
 			}
 			else if (currentFrame > 1 && currentFrame <= 2)
 			{
-				//heroSprite.move(0, 0.1 * time);
-				heroSprite.setTextureRect(IntRect(473, 48, 15, 15));
+				heroSprite.setTextureRect(IntRect(473, 49, 13, 13));
 			}
 			else if (currentFrame > 2)
 			{
 				currentFrame -= 2;
-				//heroSprite.move(0, 0.1 * time);
-				heroSprite.setTextureRect(IntRect(456, 48, 15, 12));
+				heroSprite.setTextureRect(IntRect(457, 49, 13, 9));
 			}
 			dy = 0.1;
 			dx = 0;
@@ -237,30 +230,29 @@ int main()
 			for (int j = 0; j < W; j++)
 			{
 				if (TileMap[i][j] == '0')
+				{
+					mapSprite.setPosition(j * ts.width, i * ts.width);
+					window.draw(mapSprite);
 					continue;
+				}
 				if (TileMap[i][j] == ' ')
 				{
-					/*Texture t;
-					t.loadFromFile("images/point.png");*/
-
-					/*Sprite s;
-					s.setTexture(t);
-					s.setTextureRect(IntRect(0, 0, 8, 8));
-					s.setPosition(24, 24);
-					window.draw(s);*/
+					//continue;
 					rectangle.setFillColor(Color::Black);	
 				}
 					
 				if (TileMap[i][j] == 'e')
+				{
 					rectangle.setFillColor(Color::Black);
-
+				}
 				rectangle.setPosition(j * ts.width, i * ts.height);
 				window.draw(rectangle);
+				
 			}
 		}
 		
 		update(time);
-		//window.draw(s);
+		//window.draw(s); //если убрать комментарии наложится карта
 		window.draw(heroSprite);
 		
 		window.display();		
