@@ -10,11 +10,12 @@ Sprite heroSprite;
 
 //0 - стенка
 //E - еда
+//W - большие точки
 String TileMap[H] = {
 	"0000000000000000000",
 	"0EEEEEEEE0EEEEEEEE0",
 	"0E00E000E0E000E00E0",
-	"0E00E000E0E000E00E0",
+	"0W00E000E0E000E00W0",
 	"0EEEEEEEEEEEEEEEEE0",
 	"0E00E0E00000E0E00E0",
 	"0EEEE0EEE0EEE0EEEE0",
@@ -27,7 +28,7 @@ String TileMap[H] = {
 	"0000E0 00000 0E0000",
 	"0EEEEEEEE0EEEEEEEE0",
 	"0E00E000E0E000E00E0",
-	"0EE0EEEEE EEEEE0EE0",
+	"0WE0EEEEE EEEEE0EW0",
 	"00E0E0E00000E0E0E00",
 	"0EEEE0EEE0EEE0EEEE0",
 	"0E000000E0E000000E0",
@@ -156,8 +157,9 @@ int main()
 	Texture point;
 	point.loadFromFile("images/point.png");
 
+	//текстура большой точки
 	Texture bigPoint;
-	bigPoint.loadFromFile("images/point.png");
+	bigPoint.loadFromFile("images/bigPoint.png");
 
 	//текстура заставки "Победы"
 	Texture win;
@@ -180,7 +182,7 @@ int main()
 	
 	//спрайт большой точечки
 	Sprite bigEat;
-	bigEat.setTexture(point);
+	bigEat.setTexture(bigPoint);
 	bigEat.setTextureRect(IntRect(0, 0, 8, 8));
 
 	//спрайт конца игры
@@ -314,6 +316,12 @@ int main()
 					eat.setPosition(j * ts.width + ts.width / 4, i * ts.height + ts.height / 4);					
 					window.draw(eat);
 				}				
+
+				if (TileMap[i][j] == 'W')
+				{
+					bigEat.setPosition(j * ts.width + ts.width / 4, i * ts.height + ts.height / 4);
+					window.draw(bigEat);
+				}
 			}
 		}		
 

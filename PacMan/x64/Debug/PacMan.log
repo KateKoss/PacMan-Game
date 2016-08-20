@@ -1,23 +1,24 @@
 ﻿  main.cpp
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(56): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(69): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(57): warning C4305: 'initializing': truncation from 'double' to 'float'
 c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(70): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(77): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(83): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(90): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(95): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(196): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(209): warning C4244: 'initializing': conversion from 'sf::Int64' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(215): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(229): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(234): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(248): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(253): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(267): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(272): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(286): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(308): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(314): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(335): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(71): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(78): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(84): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(91): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(96): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(198): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(211): warning C4244: 'initializing': conversion from 'sf::Int64' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(217): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(231): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(236): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(250): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(255): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(269): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(274): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(288): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(310): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(316): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(322): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\людмила\documents\github\pacman-game\pacman\main.cpp(343): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   PacMan.vcxproj -> C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Debug\PacMan.exe
   PacMan.vcxproj -> C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Debug\PacMan.pdb (Full PDB)
