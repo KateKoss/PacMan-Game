@@ -1,10 +1,55 @@
-﻿Сборка начата 19.08.2016 22:03:33.
+﻿Сборка начата 25.08.2016 16:16:18.
      1>Проект "C:\Users\Катя\Source\Repos\PacMan-Game\PacMan\PacMan.vcxproj" в узле 2 (целевые объекты Build).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Work\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\Катя\Documents\SFML-2.3.2\include" /I"C:\Users\Людмила\Downloads\SFML-2.3.2-windows-vc14-64-bit\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(49): warning C4305: инициализация: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(65): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(66): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(69): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(70): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(89): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(91): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(96): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(99): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(104): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(109): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(125): warning C4305: -=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(129): warning C4305: +=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(130): warning C4305: -=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(137): warning C4305: +=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(141): warning C4305: +=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(142): warning C4305: +=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(152): warning C4305: -=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(156): warning C4305: -=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(157): warning C4305: +=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(164): warning C4305: -=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(168): warning C4305: -=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(169): warning C4305: -=: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(200): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(201): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(207): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(210): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(215): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(220): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(278): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(291): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(297): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(311): warning C4305: =: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(316): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(330): warning C4305: =: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(335): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(349): warning C4305: =: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(354): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(368): warning C4305: =: усечение из "double" к "float"
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(379): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(392): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+     1>c:\users\катя\source\repos\pacman-game\pacman\main.cpp(399): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
+       Link:
          C:\Program Files (x86)\Work\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Катя\Source\Repos\PacMan-Game\x64\Debug\PacMan.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Катя\Documents\SFML-2.3.2\lib" /LIBPATH:"C:\Users\Людмила\Downloads\SFML-2.3.2-windows-vc14-64-bit\SFML-2.3.2\lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" "sfml-graphics-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Катя\Source\Repos\PacMan-Game\x64\Debug\PacMan.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Катя\Source\Repos\PacMan-Game\x64\Debug\PacMan.lib" /MACHINE:X64 x64\Debug\main.obj
          PacMan.vcxproj -> C:\Users\Катя\Source\Repos\PacMan-Game\x64\Debug\PacMan.exe
      1>Сборка проекта "C:\Users\Катя\Source\Repos\PacMan-Game\PacMan\PacMan.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.70
+Затраченное время: 00:00:01.75
