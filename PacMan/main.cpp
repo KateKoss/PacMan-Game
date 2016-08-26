@@ -56,7 +56,7 @@ class Enemy
 private:
 	float dxEnemy, dyEnemy;
 	float XEnemy, YEnemy;	//координати врага
-	int currentFrame;
+	float currentFrameEnemy;
 	bool alive;
 public:
 	Sprite enemySprite;
@@ -67,11 +67,12 @@ public:
 		enemySprite.setTexture(enemyTexture);//загружаем текстуру в спрайт
 		enemySprite.setTextureRect(IntRect(457,65,13,13)); //вырезаем картинку героя из тайлсета
 		enemySprite.setPosition(X, Y);//устанавливаем начальное положение врага на карте
-		currentFrame = dxEnemy = dyEnemy = 0;
+		currentFrameEnemy = dxEnemy = dyEnemy = 0;
 	};
 	void update(float time)
 	{
 		findEnemyDirection();
+		animationEnemy(time);
 		XEnemy += dxEnemy*time;
 		Collision(0);
 
@@ -82,7 +83,7 @@ public:
 		enemySprite.setPosition(XEnemy, YEnemy);
 		dxEnemy = dyEnemy = 0;
 	}
-	void Collision(int dir)
+	void Collision(int dir)		//оброботка столкновения
 	{
 		if ((XEnemy / ts.width) > 0 && (YEnemy / ts.height) > 0)
 		{
@@ -114,7 +115,7 @@ public:
 			}
 		}
 	}
-	void findEnemyDirection()
+	void findEnemyDirection()	//поиск направления движения врага
 	{
 		if (X >= XEnemy)
 		{
@@ -170,26 +171,47 @@ public:
 				}
 			}
 		}
-		/*if (X > XEnemy && Y > YEnemy)
+	}
+	void animationEnemy(float time)
+	{
+		currentFrameEnemy += 0.005*time; //служит для прохождения по "кадрам". переменная доходит до двухх суммируя произведение времени и скорости. изменив 0.005 можно изменить скорость анимации
+		if (currentFrameEnemy > 0 && currentFrameEnemy <= 1)
 		{
-			dxEnemy += 0.1;
-			dyEnemy += 0.1;
+			enemySprite.setTextureRect(IntRect(457, 65, 13, 13));
 		}
-		else if(X < XEnemy && Y > YEnemy)
+		else if (currentFrameEnemy > 1 && currentFrameEnemy <= 2)
 		{
-			dxEnemy -= 0.1;
-			dyEnemy += 0.1;
+			enemySprite.setTextureRect(IntRect(473, 65, 13, 13));
 		}
-		else if(X < XEnemy && Y < YEnemy)
+		else if (currentFrameEnemy > 2 && currentFrameEnemy <= 3)
 		{
-			dxEnemy -= 0.1;
-			dyEnemy -= 0.1;
+			enemySprite.setTextureRect(IntRect(489, 65, 13, 13));
 		}
-		else if (X > XEnemy && Y < YEnemy)
+		else if (currentFrameEnemy > 3 && currentFrameEnemy <= 4)
 		{
-			dxEnemy += 0.1;
-			dyEnemy -= 0.1;
-		}*/
+			enemySprite.setTextureRect(IntRect(505, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 4 && currentFrameEnemy <= 5)
+		{
+			enemySprite.setTextureRect(IntRect(521, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 5 && currentFrameEnemy <= 6)
+		{
+			enemySprite.setTextureRect(IntRect(537, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 6 && currentFrameEnemy <= 7)
+		{
+			enemySprite.setTextureRect(IntRect(553, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 7 && currentFrameEnemy <= 8)
+		{
+			enemySprite.setTextureRect(IntRect(569, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 8)
+		{
+			currentFrameEnemy -= 8; // если пришли к последнему кадру - откидываемся назад.	
+			enemySprite.setTextureRect(IntRect(457, 65, 13, 13));
+		}
 	}
 };
 
@@ -271,7 +293,7 @@ int main(int argc, char *argv[])
 	mapSprite.setTexture(mapTexture);
 	mapSprite.setTextureRect(IntRect(614, 20, 16, 16));//607, 21, 16, 16//ts.width, ts.height
 	//---------------------
-	Enemy enemy(mapTexture,17*1,17*2);
+	Enemy enemy(mapTexture,17*1,17*2);		//создали врага
 
 	Clock clock;
 
@@ -396,7 +418,7 @@ int main(int argc, char *argv[])
 		}
 		
 		update(time);
-		enemy.update(time*0.5);
+		enemy.update(time/2);
 		//window.draw(s); //если убрать комментарии наложится карта
 		window.draw(heroSprite);
 		
