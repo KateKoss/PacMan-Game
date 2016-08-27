@@ -62,7 +62,170 @@ float X = 17, Y = 17;
 //текущий спрайт
 float currentFrame = 0;
 
-//функция столкновения со стенкой
+class Enemy
+{
+private:
+	float dxEnemy, dyEnemy;
+	float XEnemy, YEnemy;	//координати врага
+	float currentFrameEnemy;
+	bool alive;
+public:
+	Sprite enemySprite;
+	Enemy(Texture &enemyTexture, int X, int Y) //текстура и начальные координаты пложения врага на карте
+	{
+		XEnemy = X;
+		YEnemy = Y;
+		enemySprite.setTexture(enemyTexture);//загружаем текстуру в спрайт
+		enemySprite.setTextureRect(IntRect(457,65,13,13)); //вырезаем картинку героя из тайлсета
+		enemySprite.setPosition(X, Y);//устанавливаем начальное положение врага на карте
+		currentFrameEnemy = dxEnemy = dyEnemy = 0;
+	};
+	void update(float time)
+	{
+		findEnemyDirection();
+		animationEnemy(time);
+		XEnemy += dxEnemy*time;
+		Collision(0);
+
+		YEnemy += dyEnemy*time;
+		Collision(1);
+		
+		if ((YEnemy / ts.height) > 0 && (XEnemy / ts.width) > 0)
+		enemySprite.setPosition(XEnemy, YEnemy);
+		dxEnemy = dyEnemy = 0;
+	}
+	void Collision(int dir)		//оброботка столкновения
+	{
+		if ((XEnemy / ts.width) > 0 && (YEnemy / ts.height) > 0)
+		{
+			for (int i = YEnemy / ts.height; i < (YEnemy + ps.height) / ts.height; i++)
+			{
+				for (int j = XEnemy / ts.width; j < (XEnemy + ps.width) / ts.width; j++)
+				{
+					if (TileMap[i][j] == '0')
+					{
+						if (dxEnemy > 0 && dir == 0)
+							XEnemy = j * ts.width - ps.width;
+
+						if (dxEnemy < 0 && dir == 0)
+							XEnemy = j * ts.width + ts.width;
+
+						//если dir == 1 то мы двигаемся по оси 0Х
+						if (dyEnemy > 0 && dir == 1)
+						{
+							YEnemy = i * ts.height - ps.height;
+							dyEnemy = 0;
+						}
+						if (dyEnemy < 0 && dir == 1)
+						{
+							YEnemy = i * ts.height + ts.height;
+							dyEnemy = 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	void findEnemyDirection()	//поиск направления движения врага
+	{
+		if (X >= XEnemy)
+		{
+			if (Y < YEnemy)
+			{
+				if (X == XEnemy)
+				{
+					dyEnemy -= 0.1;//8
+				}
+				else
+				{
+					dxEnemy += 0.1;//4
+					dyEnemy -= 0.1;
+				}
+			}
+			else
+			{
+				if (X == XEnemy)
+				{
+					dyEnemy += 0.1;//6
+				}
+				else
+				{
+					dxEnemy += 0.1;
+					dyEnemy += 0.1;//1
+				}
+			}
+		}
+		else
+		{
+			if (Y >= YEnemy)
+			{
+				if (Y == YEnemy)
+				{
+					dxEnemy -= 0.1; //7
+				}
+				else
+				{
+					dxEnemy -= 0.1;//2
+					dyEnemy += 0.1;
+				}
+			}
+			else
+			{
+				if (Y == YEnemy)
+				{
+					dxEnemy -= 0.1;//5
+				}
+				else
+				{
+					dxEnemy -= 0.1;//3
+					dyEnemy -= 0.1;
+				}
+			}
+		}
+	}
+	void animationEnemy(float time)
+	{
+		currentFrameEnemy += 0.005*time; //служит для прохождения по "кадрам". переменная доходит до двухх суммируя произведение времени и скорости. изменив 0.005 можно изменить скорость анимации
+		if (currentFrameEnemy > 0 && currentFrameEnemy <= 1)
+		{
+			enemySprite.setTextureRect(IntRect(457, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 1 && currentFrameEnemy <= 2)
+		{
+			enemySprite.setTextureRect(IntRect(473, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 2 && currentFrameEnemy <= 3)
+		{
+			enemySprite.setTextureRect(IntRect(489, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 3 && currentFrameEnemy <= 4)
+		{
+			enemySprite.setTextureRect(IntRect(505, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 4 && currentFrameEnemy <= 5)
+		{
+			enemySprite.setTextureRect(IntRect(521, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 5 && currentFrameEnemy <= 6)
+		{
+			enemySprite.setTextureRect(IntRect(537, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 6 && currentFrameEnemy <= 7)
+		{
+			enemySprite.setTextureRect(IntRect(553, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 7 && currentFrameEnemy <= 8)
+		{
+			enemySprite.setTextureRect(IntRect(569, 65, 13, 13));
+		}
+		else if (currentFrameEnemy > 8)
+		{
+			currentFrameEnemy -= 8; // если пришли к последнему кадру - откидываемся назад.	
+			enemySprite.setTextureRect(IntRect(457, 65, 13, 13));
+		}
+	}
+};
+
 void Collision(int dir)
 {	
 	if ((Y / ts.height) > 0 && (X / ts.width) > 0)//если герой в границах карты
@@ -117,9 +280,9 @@ void update(float time)//отвечает за обновление при движении персонажа
 	
 	//если координаты в границах карты
 	if ((Y / ts.height) > 0 && (X / ts.width) > 0)
-		heroSprite.setPosition(X, Y);//то определяем эти координаты как место нахождения героя
-
-	dx = 0; //натыкаясь на стенку продолжает двигатся самостоятельно вертикально
+		heroSprite.setPosition(X, Y);
+	//dx = 0;		//тут герой начинает сам двигаться после нажатия стрелки движения
+	//dy = 0;
 }
 
 //функцыя проверки не выиграл ли герой еще?
@@ -192,6 +355,14 @@ int main()
 	heroSprite.setTexture(heroTexture);
 	heroSprite.setTextureRect(IntRect(455, 0, 12, 15));
 	heroSprite.setPosition(X, Y);
+	//------------------------- это нужно загнать в методы
+	Texture mapTexture;
+	mapTexture.loadFromFile("images/Pac_Man_Sprites1.png");
+	Sprite mapSprite;	
+	mapSprite.setTexture(mapTexture);
+	mapSprite.setTextureRect(IntRect(614, 20, 16, 16));//607, 21, 16, 16//ts.width, ts.height
+	//---------------------
+	Enemy enemy(mapTexture,17*1,17*2);		//создали врага
 
 	Clock clock;
 
@@ -288,8 +459,7 @@ int main()
 			dy = 0.1;
 			dx = 0;
 		}	
-		
-		window.clear(Color::Blue);
+		window.clear(Color::Blue); //нам незачем очищать весь экран, достаточно удалять героя
 
 		//отрисовка карты
 		for (int i = 0; i < H; i++)
@@ -323,8 +493,9 @@ int main()
 					window.draw(bigEat);
 				}
 			}
-		}		
-
+			window.draw(enemy.enemySprite);	//рисуем врага
+		}
+		
 		update(time);
 		//window.draw(s); //если разкомментить будет добавлена карта
 		window.draw(heroSprite);//рисуем героя
