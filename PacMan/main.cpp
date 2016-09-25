@@ -6,47 +6,6 @@ using namespace sf;
 const int H = 22;//ечеек в памяти для карты
 const int W = 19;
 
-Sprite heroSprite;
-
-//0 - стенка
-//E - еда
-//W - большие точки
-String TileMap[H] = {
-	"0000000000000000000",
-	"0EEEEEEEE0EEEEEEEE0",
-	"0E00E000E0E000E00E0",
-	"0W00E000E0E000E00W0",
-	"0EEEEEEEEEEEEEEEEE0",
-	"0E00E0E00000E0E00E0",
-	"0EEEE0EEE0EEE0EEEE0",
-	"0000E000 0 000E0000",
-	"0000E0       0E0000",
-	"0000E0 00000 0E0000",
-	"0   E  00000  E   0",
-	"0000E0 00000 0E0000",
-	"0000E0       0E0000",
-	"0000E0 00000 0E0000",
-	"0EEEEEEEE0EEEEEEEE0",
-	"0E00E000E0E000E00E0",
-	"0WE0EEEEE EEEEE0EW0",
-	"00E0E0E00000E0E0E00",
-	"0EEEE0EEE0EEE0EEEE0",
-	"0E000000E0E000000E0",
-	"0EEEEEEEEEEEEEEEEE0",
-	"0000000000000000000",
-};
-
-//структура параметров плитки
-struct TileSize
-{
-	int width = 16;
-	int height = 16;
-};
-
-//структура параметров героя
-struct PlayerSize
-{
-	int width = 12;
 	int height = 15;
 };
 
