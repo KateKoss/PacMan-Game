@@ -1,0 +1,58 @@
+﻿Build started 04.10.2016 23:03:07.
+     1>Project "C:\Users\Людмила\Documents\GitHub\PacMan-Game\PacMan\PacMan.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I"C:\Users\Людмила\Downloads\SFML-2.3.2-windows-vc14-64-bit\SFML-2.3.2\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt main.cpp
+         main.cpp
+     1>main.cpp(57): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>main.cpp(76): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(77): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(80): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(103): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>main.cpp(105): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>main.cpp(110): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(113): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(118): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(123): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(140): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>main.cpp(144): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>main.cpp(145): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>main.cpp(152): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>main.cpp(156): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>main.cpp(157): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>main.cpp(167): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>main.cpp(171): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>main.cpp(172): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>main.cpp(179): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>main.cpp(183): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>main.cpp(184): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>main.cpp(192): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>main.cpp(237): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>main.cpp(238): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>main.cpp(245): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(251): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(258): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(263): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(373): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(386): warning C4244: 'initializing' : conversion from 'sf::Int64' to 'float', possible loss of data
+     1>main.cpp(392): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>main.cpp(406): warning C4305: '=' : truncation from 'double' to 'float'
+     1>main.cpp(411): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>main.cpp(425): warning C4305: '=' : truncation from 'double' to 'float'
+     1>main.cpp(430): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>main.cpp(444): warning C4305: '=' : truncation from 'double' to 'float'
+     1>main.cpp(449): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>main.cpp(463): warning C4305: '=' : truncation from 'double' to 'float'
+     1>main.cpp(484): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(490): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(496): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(518): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Release\PacMan.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\Людмила\Downloads\SFML-2.3.2-windows-vc14-64-bit\SFML-2.3.2\lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" "sfml-graphics-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Release\PacMan.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Release\PacMan.lib" /MACHINE:X64 x64\Release\main.obj
+         Generating code
+         Finished generating code
+         PacMan.vcxproj -> C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Release\PacMan.exe
+     1>Done Building Project "C:\Users\Людмила\Documents\GitHub\PacMan-Game\PacMan\PacMan.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.85

@@ -80,6 +80,7 @@ public:
 		enemySprite.setPosition(X, Y);//устанавливаем начальное положение врага на карте
 		currentFrameEnemy = dxEnemy = dyEnemy = 0;
 	};
+
 	void update(float time)
 	{
 		findEnemyDirection();
@@ -89,11 +90,12 @@ public:
 
 		YEnemy += dyEnemy*time;
 		Collision(1);
-		
+
 		if ((YEnemy / ts.height) > 0 && (XEnemy / ts.width) > 0)
-		enemySprite.setPosition(XEnemy, YEnemy);
+			enemySprite.setPosition(XEnemy, YEnemy);
 		dxEnemy = dyEnemy = 0;
 	}
+
 	void Collision(int dir)		//оброботка столкновения
 	{
 		if ((XEnemy / ts.width) > 0 && (YEnemy / ts.height) > 0)
@@ -126,6 +128,7 @@ public:
 			}
 		}
 	}
+
 	void findEnemyDirection()	//поиск направления движения врага
 	{
 		if (X >= XEnemy)
@@ -183,6 +186,7 @@ public:
 			}
 		}
 	}
+
 	void animationEnemy(float time)
 	{
 		currentFrameEnemy += 0.005*time; //служит для прохождения по "кадрам". переменная доходит до двухх суммируя произведение времени и скорости. изменив 0.005 можно изменить скорость анимации
@@ -285,7 +289,7 @@ void update(float time)//отвечает за обновление при движении персонажа
 	//dy = 0;
 }
 
-//функцыя проверки не выиграл ли герой еще?
+//функция проверки не выиграл ли герой еще?
 bool finish()
 {
 	for (int i = 0; i < H; i++)
@@ -306,7 +310,7 @@ int main()
 
 	//картинка героя
 	Image heroImage;
-	heroImage.loadFromFile("images/Pac_Man_Sprites.png");
+	heroImage.loadFromFile("images/Pac_Man_Sprites1.png");
 
 	//текстура героя
 	Texture heroTexture;
@@ -514,7 +518,7 @@ int main()
 			txt.setPosition(W*ts.width/8, H*ts.height/2);			
 			txt.setFont(font);
 			txt.setColor(Color::White);
-			txt.setString(L"Press space bar\n to finish game.");			
+			txt.setString("Press space bar\n to finish game.");			
 			window.draw(txt);
 
 			//если пользователь нажал кнопку закрываем игру
