@@ -471,7 +471,11 @@ int main()
 			for (int j = 0; j < W; j++)
 			{
 				if (TileMap[i][j] == '0')
+				{
+					mapSprite.setPosition(j * ts.width, i * ts.width);
+					window.draw(mapSprite);
 					continue;
+				}
 				if (TileMap[i][j] == ' ')
 				{							
 					rectangle.setFillColor(Color::Black);	
@@ -501,6 +505,7 @@ int main()
 		}
 		
 		update(time);
+		enemy.update(time / 2); //запускаем передвижение и анимацию врага
 		//window.draw(s); //если разкомментить будет добавлена карта
 		window.draw(heroSprite);//рисуем героя
 				

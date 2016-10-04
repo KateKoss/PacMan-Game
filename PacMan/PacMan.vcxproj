@@ -136,7 +136,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>SFML_DYNAMIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>.\x64\Debug\SFML-2.3\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\x64\Debug\SFML-2.3\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
