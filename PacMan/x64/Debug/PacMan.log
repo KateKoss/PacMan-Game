@@ -1,4 +1,4 @@
-﻿Build started 04.10.2016 23:21:45.
+﻿Build started 04.10.2016 23:42:18.
      1>Project "C:\Users\Людмила\Documents\GitHub\PacMan-Game\PacMan\PacMan.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /I".\x64\Debug\SFML-2.3\include" /Zi /nologo /W3 /WX- /sdl /Od /D SFML_DYNAMIC /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt main.cpp
@@ -42,15 +42,17 @@
      1>main.cpp(444): warning C4305: '=' : truncation from 'double' to 'float'
      1>main.cpp(449): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
      1>main.cpp(463): warning C4305: '=' : truncation from 'double' to 'float'
-     1>main.cpp(484): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>main.cpp(490): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>main.cpp(496): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>main.cpp(518): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(475): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(488): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(494): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(500): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>main.cpp(523): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Debug\PacMan.exe" /INCREMENTAL /NOLOGO /LIBPATH:".\x64\Debug\SFML-2.3\lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" "sfml-graphics-d.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Debug\PacMan.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Debug\PacMan.lib" /MACHINE:X64 x64\Debug\main.obj
+         LINK : C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Debug\PacMan.exe not found or not built by the last incremental link; performing full link
          PacMan.vcxproj -> C:\Users\Людмила\Documents\GitHub\PacMan-Game\x64\Debug\PacMan.exe
      1>Done Building Project "C:\Users\Людмила\Documents\GitHub\PacMan-Game\PacMan\PacMan.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.20
+Time Elapsed 00:00:03.82
