@@ -1,5 +1,9 @@
 #include <SFML/Graphics.hpp>
 #include <stdio.h>
+#include <iostream>
+#include <conio.h>
+#include <string.h>
+
 
 using namespace sf;
 
@@ -39,8 +43,8 @@ String TileMap[H] = {
 //структура параметров плитки
 struct TileSize
 {
-	int width = 16;
-	int height = 16;
+	int width = 20;
+	int height = 20;
 };
 
 //структура параметров героя
@@ -56,23 +60,48 @@ PlayerSize ps;
 //скорость персонажа
 float dx = 0.1, dy = 0.1; 
 
-//координати персонажа
-float X = 17, Y = 17;
+//координаты персонажа
+float X = 20, Y = 20;
+
+//координаты врага в глобальных переменных
+float globalXEnemy, globalYEnemy;
 
 //текущий спрайт
 float currentFrame = 0;
+
+//жизни героя
+int lifes = 3;
 
 class Enemy
 {
 private:
 	float dxEnemy, dyEnemy;
-	float XEnemy, YEnemy;	//координати врага
+	float XEnemy = 20, YEnemy=20;	//координаты врага
 	float currentFrameEnemy;
 	bool alive;
+	int enemyType;
+	int diffInPicture[4];
 public:
-	Sprite enemySprite;
-	Enemy(Texture &enemyTexture, int X, int Y) //текстура и начальные координаты пложения врага на карте
+	float getXEnemy()
 	{
+		return XEnemy;
+	}
+	float getYEnemy()
+	{
+		return YEnemy;
+	}
+	Sprite enemySprite;
+	Enemy()
+	{
+
+	};
+	Enemy(Texture &enemyTexture, int X, int Y,int enemyTyp) //текстура и начальные координаты пложения врага на карте
+	{
+		diffInPicture[0] = 65;
+		diffInPicture[1] = 81;
+		diffInPicture[2] = 97;
+		diffInPicture[3] = 113;
+		enemyType = enemyTyp;
 		XEnemy = X;
 		YEnemy = Y;
 		enemySprite.setTexture(enemyTexture);//загружаем текстуру в спрайт
@@ -81,14 +110,31 @@ public:
 		currentFrameEnemy = dxEnemy = dyEnemy = 0;
 	};
 
+	bool collisionWithEnemy()
+	{
+		int accuracy = 1;
+		if (XEnemy > X - accuracy && XEnemy < X + accuracy && YEnemy > Y - accuracy && YEnemy < Y + accuracy)
+		{
+			XEnemy = ts.width * 1;
+			YEnemy = ts.height * 2;
+
+			return true;
+		}
+		else
+			return false;
+
+	}
+
 	void update(float time)
 	{
 		findEnemyDirection();
 		animationEnemy(time);
 		XEnemy += dxEnemy*time;
+		globalXEnemy = XEnemy;
 		Collision(0);
 
 		YEnemy += dyEnemy*time;
+		globalYEnemy = YEnemy;
 		Collision(1);
 
 		if ((YEnemy / ts.height) > 0 && (XEnemy / ts.width) > 0)
@@ -192,40 +238,40 @@ public:
 		currentFrameEnemy += 0.005*time; //служит для прохождения по "кадрам". переменная доходит до двухх суммируя произведение времени и скорости. изменив 0.005 можно изменить скорость анимации
 		if (currentFrameEnemy > 0 && currentFrameEnemy <= 1)
 		{
-			enemySprite.setTextureRect(IntRect(457, 65, 13, 13));
+			enemySprite.setTextureRect(IntRect(457, diffInPicture[enemyType - 1], 13, 13));
 		}
 		else if (currentFrameEnemy > 1 && currentFrameEnemy <= 2)
 		{
-			enemySprite.setTextureRect(IntRect(473, 65, 13, 13));
+			enemySprite.setTextureRect(IntRect(473, diffInPicture[enemyType - 1], 13, 13));
 		}
 		else if (currentFrameEnemy > 2 && currentFrameEnemy <= 3)
 		{
-			enemySprite.setTextureRect(IntRect(489, 65, 13, 13));
+			enemySprite.setTextureRect(IntRect(489, diffInPicture[enemyType - 1], 13, 13));
 		}
 		else if (currentFrameEnemy > 3 && currentFrameEnemy <= 4)
 		{
-			enemySprite.setTextureRect(IntRect(505, 65, 13, 13));
+			enemySprite.setTextureRect(IntRect(505, diffInPicture[enemyType - 1], 13, 13));
 		}
 		else if (currentFrameEnemy > 4 && currentFrameEnemy <= 5)
 		{
-			enemySprite.setTextureRect(IntRect(521, 65, 13, 13));
+			enemySprite.setTextureRect(IntRect(521, diffInPicture[enemyType - 1], 13, 13));
 		}
 		else if (currentFrameEnemy > 5 && currentFrameEnemy <= 6)
 		{
-			enemySprite.setTextureRect(IntRect(537, 65, 13, 13));
+			enemySprite.setTextureRect(IntRect(537, diffInPicture[enemyType - 1], 13, 13));
 		}
 		else if (currentFrameEnemy > 6 && currentFrameEnemy <= 7)
 		{
-			enemySprite.setTextureRect(IntRect(553, 65, 13, 13));
+			enemySprite.setTextureRect(IntRect(553, diffInPicture[enemyType - 1], 13, 13));
 		}
 		else if (currentFrameEnemy > 7 && currentFrameEnemy <= 8)
 		{
-			enemySprite.setTextureRect(IntRect(569, 65, 13, 13));
+			enemySprite.setTextureRect(IntRect(569, diffInPicture[enemyType - 1], 13, 13));
 		}
 		else if (currentFrameEnemy > 8)
 		{
 			currentFrameEnemy -= 8; // если пришли к последнему кадру - откидываемся назад.	
-			enemySprite.setTextureRect(IntRect(457, 65, 13, 13));
+			enemySprite.setTextureRect(IntRect(457, diffInPicture[enemyType - 1], 13, 13));
 		}
 	}
 };
@@ -271,6 +317,7 @@ void Collision(int dir)
 				}
 			}
 	}
+
 }
 
 void update(float time)//отвечает за обновление при движении персонажа
@@ -289,27 +336,36 @@ void update(float time)//отвечает за обновление при движении персонажа
 	//dy = 0;
 }
 
+
 //функция проверки не выиграл ли герой еще?
-bool finish()
+int finish(Enemy &e1, Enemy &e2, Enemy &e3, Enemy &e4)
 {
+	if (e1.collisionWithEnemy() || e2.collisionWithEnemy() || e3.collisionWithEnemy() || e4.collisionWithEnemy())
+	{
+		lifes--;
+		if (lifes <= 0)
+			return 1;//возвращаем 1 если мы столкнулись с врагом и жизни закончились
+	}
+	
 	for (int i = 0; i < H; i++)
 		for (int j = 0; j < W; j++)
 		{
 			if (TileMap[i][j] == 'E')//если на карте осталась хоть одна точка
 			{
-				return false;
+				return 0; //продолжаем игру
 				break;//прекаращаем проверку и продолжаем игру
 			}
 		}
-	return true;
+	return 2; //возвращаем 2 если мы сьели все точки -  мы выиграли
 }
 
 int main()
 {
-	RenderWindow window(sf::VideoMode(W*ts.width, H*ts.height), "PacMan"); //Style::Fullscreen
+	RenderWindow window(sf::VideoMode(W*ts.width, H*ts.height), "PacMan", sf::Style::Close); //Style::Fullscreen
 
 	//картинка героя
 	Image heroImage;
+	
 	heroImage.loadFromFile("images/Pac_Man_Sprites1.png");
 
 	//текстура героя
@@ -334,7 +390,7 @@ int main()
 
 	//текстура заставки "Проиграша"
 	Texture gameOver;
-	gameOver.loadFromFile("images/win.png");
+	gameOver.loadFromFile("images/over.png");
 
 	//спрайт карти
 	Sprite s;
@@ -364,10 +420,14 @@ int main()
 	mapTexture.loadFromFile("images/Pac_Man_Sprites1.png");
 	Sprite mapSprite;	
 	mapSprite.setTexture(mapTexture);
-	mapSprite.setTextureRect(IntRect(614, 20, 16, 16));//607, 21, 16, 16//ts.width, ts.height
-	//---------------------
-	Enemy enemy(mapTexture,17*1,17*2);		//создали врага
+	mapSprite.setTextureRect(IntRect(614, 20, ts.width-1, ts.height-1));//607, 21, 16, 16//ts.width, ts.height
 
+	//---------------------
+	Enemy enemy(mapTexture, ts.height*1, ts.height*2, 1);  //создали врага
+	Enemy enemy2(mapTexture, ts.height*2, ts.height*19, 2);
+	Enemy enemy3(mapTexture, ts.height*17, ts.height*2, 3);
+	Enemy enemy4(mapTexture, ts.height*17, ts.height*19, 4);
+	
 	Clock clock;
 
 	RectangleShape rectangle(Vector2f(ts.width, ts.height));
@@ -381,27 +441,28 @@ int main()
 		{
 			if (event.type == Event::Closed)
 				window.close();
+			
 		}
 		
 		float time = clock.getElapsedTime().asMicroseconds(); //дать прошедшее время в микросекундах
 		clock.restart(); //перезагружает время
-		time /= 600; //скорость игры(чем меньше число - тем быстрее)
+		time /= 1000; //скорость игры(чем меньше число - тем быстрее)
 
 		if (Keyboard::isKeyPressed(Keyboard::Left))
 		{
 			currentFrame += 0.005*time; //служит для прохождения по "кадрам". переменная доходит до двухх суммируя произведение времени и скорости. изменив 0.005 можно изменить скорость анимации
 			if (currentFrame > 0 && currentFrame <= 1)
 			{
-				heroSprite.setTextureRect(IntRect(460, 16, 12, 15));				
+				heroSprite.setTextureRect(IntRect(461, 17, 9, 13));				
 			}
 			else if (currentFrame > 1 && currentFrame <= 2)
 			{
-				heroSprite.setTextureRect(IntRect(472, 16, 15, 15));				
+				heroSprite.setTextureRect(IntRect(474, 17, 13, 13));				
 			}
 			else if (currentFrame > 2)
 			{
 				currentFrame -= 2; // если пришли к второму кадру - откидываемся назад.					
-				heroSprite.setTextureRect(IntRect(460, 16, 12, 15));
+				heroSprite.setTextureRect(IntRect(461, 17, 9, 13));
 			}
 			dx = -0.1;
 			dy = 0;
@@ -411,16 +472,16 @@ int main()
 			currentFrame += 0.005*time; //служит для прохождения по "кадрам". переменная доходит до двухх суммируя произведение времени и скорости. изменив 0.005 можно изменить скорость анимации
 			if (currentFrame > 0 && currentFrame <= 1)
 			{
-				heroSprite.setTextureRect(IntRect(455, 0, 12, 15));
+				heroSprite.setTextureRect(IntRect(457, 1, 9, 13));
 			}
 			else if (currentFrame > 1 && currentFrame <= 2)
 			{
-				heroSprite.setTextureRect(IntRect(473, 0, 15, 15));
+				heroSprite.setTextureRect(IntRect(472, 1, 13, 13));
 			}
 			else if (currentFrame > 2)
 			{
 				currentFrame -= 2; // если пришли к второму кадру - откидываемся назад.				
-				heroSprite.setTextureRect(IntRect(455 * int(currentFrame), 0, 12, 15));
+				heroSprite.setTextureRect(IntRect(457, 1, 9, 13));
 			}
 			dx = 0.1;
 			dy = 0;
@@ -430,16 +491,16 @@ int main()
 			currentFrame += 0.005*time;
 			if (currentFrame > 0 && currentFrame <= 1)
 			{
-				heroSprite.setTextureRect(IntRect(456, 36, 15, 12));
+				heroSprite.setTextureRect(IntRect(457, 37, 13, 9));
 			}
 			else if (currentFrame > 1 && currentFrame <= 2)
 			{
-				heroSprite.setTextureRect(IntRect(473, 33, 15, 15));
+				heroSprite.setTextureRect(IntRect(473, 34, 13, 13));
 			}
 			else if (currentFrame > 2)
 			{
 				currentFrame -= 2;				
-				heroSprite.setTextureRect(IntRect(456, 36, 15, 12));
+				heroSprite.setTextureRect(IntRect(457, 37, 13, 9));
 			}
 			dy = -0.1;
 			dx = 0;
@@ -449,16 +510,16 @@ int main()
 			currentFrame += 0.005*time;
 			if (currentFrame > 0 && currentFrame <= 1)
 			{
-				heroSprite.setTextureRect(IntRect(456, 48, 15, 12));
+				heroSprite.setTextureRect(IntRect(457, 49, 13, 9));
 			}
 			else if (currentFrame > 1 && currentFrame <= 2)
 			{				
-				heroSprite.setTextureRect(IntRect(473, 48, 15, 15));
+				heroSprite.setTextureRect(IntRect(473, 49, 13, 13));
 			}
 			else if (currentFrame > 2)
 			{
 				currentFrame -= 2;				
-				heroSprite.setTextureRect(IntRect(456, 48, 15, 12));
+				heroSprite.setTextureRect(IntRect(457, 49, 13, 9));
 			}
 			dy = 0.1;
 			dx = 0;
@@ -502,36 +563,102 @@ int main()
 				}
 			}
 			window.draw(enemy.enemySprite);	//рисуем врага
+			window.draw(enemy2.enemySprite);
+			window.draw(enemy3.enemySprite);
+			window.draw(enemy4.enemySprite);
 		}
 		
 		update(time);
-		enemy.update(time / 2); //запускаем передвижение и анимацию врага
+		enemy.update(time / 4); //запускаем передвижение и анимацию врага
+		enemy2.update(time*0.3);
+		enemy3.update(time*0.2);
+		enemy4.update(time*0.22);
+		
 		//window.draw(s); //если разкомментить будет добавлена карта
 		window.draw(heroSprite);//рисуем героя
-				
-		if (finish())//проверяем не выграл ли герой?
+		Font font;
+		font.loadFromFile("OffsetPlain.ttf");
+		Text txt;
+		txt.setPosition(W*16,-10);
+		txt.setFont(font);
+		std::string s = std::to_string(lifes) + " lifes";
+		txt.setString(s);
+		window.draw(txt);
+
+		int fin = finish(enemy, enemy2, enemy3, enemy4);
+		
+		if (fin==2)//проверяем не выиграл ли герой?
 		{
+			//старое окно закрываем
+			window.close();
+			//создаем новое окно
+			RenderWindow newWindow(sf::VideoMode(W * 16, H * 16), "PacMan", sf::Style::Close);
+
 			//рисуем спрайт выиграша
 			TheEnd.setTexture(win);
-			TheEnd.setTextureRect(IntRect(0, 0, W*ts.width, H*ts.height));			
-			window.draw(TheEnd);
+			TheEnd.setTextureRect(IntRect(0, 0, W*16, H*16));			
+			newWindow.draw(TheEnd);
+			
+			//выводим текст
+			Font font;
+			font.loadFromFile("OffsetPlain.ttf");
+			Text txt;
+			txt.setPosition(W*16/8, H*16/2);			
+			txt.setFont(font);
+			//txt.setColor(Color::White);
+			txt.setString("Press space bar\n to finish game.");			
+			newWindow.draw(txt);
+
+			while (newWindow.isOpen())
+			{
+				//отображаем новое окно
+				newWindow.display();
+				//если пользователь нажал кнопку закрываем игру
+				if (Keyboard::isKeyPressed(Keyboard::Space))
+					newWindow.close();
+			}
+			
+		}
+		else if (fin == 1)//если мы проиграли
+		{
+			//window.clear();
+			//старое окно закрываем
+			window.close();
+			//создаем новое окно
+			RenderWindow newWindow(sf::VideoMode(W * 16, H * 16), "PacMan", sf::Style::Close);
+			//X = 20;
+			//Y = 20;
+			//рисуем спрайт проиграша
+			TheEnd.setTexture(gameOver);
+			TheEnd.setTextureRect(IntRect(0, 0, W*16, H*16));
+			newWindow.draw(TheEnd);
 
 			//выводим текст
 			Font font;
-			font.loadFromFile("CyrilicOld.ttf");
+			font.loadFromFile("OffsetPlain.ttf");
 			Text txt;
-			txt.setPosition(W*ts.width/8, H*ts.height/2);			
+			txt.setPosition(W*18 / 8, H*18 / 2);
 			txt.setFont(font);
-			txt.setColor(Color::White);
-			txt.setString("Press space bar\n to finish game.");			
-			window.draw(txt);
-
-			//если пользователь нажал кнопку закрываем игру
-			if (Keyboard::isKeyPressed(Keyboard::Space))
-				window.close();
+			//txt.setColor(Color::White);
+			txt.setString("Press space bar\n to finish game.");
+			newWindow.draw(txt);
+			//newWindow.display();
+			while (newWindow.isOpen())
+			{
+				//отображаем новое окно
+				newWindow.display();
+				//если пользователь нажал кнопку закрываем игру
+				//int q = 0;
+				//sf::Event eventw;
+				if (Keyboard::isKeyPressed(Keyboard::Space))
+				{
+					newWindow.close();
+				}
+			}
 		}
-
+		 
 		window.display(); //отображаем все
+
 	}
 
 	return 0;

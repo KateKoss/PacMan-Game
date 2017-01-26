@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -92,9 +93,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3bb62b92684cd1a14b14efdaf0471440"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1TcpListener.html#a3bb62b92684cd1a14b14efdaf0471440">getLocalPort</a> () const </td></tr>
 <tr class="memdesc:a3bb62b92684cd1a14b14efdaf0471440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the port to which the socket is bound locally.  <a href="#a3bb62b92684cd1a14b14efdaf0471440">More...</a><br /></td></tr>
 <tr class="separator:a3bb62b92684cd1a14b14efdaf0471440"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a409d9350d3abfea9636df8cf4a61004e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsf_1_1Socket.html#a51bf0fd51057b98a10fbb866246176dc">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1TcpListener.html#a409d9350d3abfea9636df8cf4a61004e">listen</a> (unsigned short port)</td></tr>
-<tr class="memdesc:a409d9350d3abfea9636df8cf4a61004e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start listening for connections.  <a href="#a409d9350d3abfea9636df8cf4a61004e">More...</a><br /></td></tr>
-<tr class="separator:a409d9350d3abfea9636df8cf4a61004e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9504758ea3570e62cb20b209c11776a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsf_1_1Socket.html#a51bf0fd51057b98a10fbb866246176dc">Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1TcpListener.html#a9504758ea3570e62cb20b209c11776a1">listen</a> (unsigned short port, const <a class="el" href="classsf_1_1IpAddress.html">IpAddress</a> &amp;address=<a class="el" href="classsf_1_1IpAddress.html#a3dbc10b0dc6804cc69e29342f7406907">IpAddress::Any</a>)</td></tr>
+<tr class="memdesc:a9504758ea3570e62cb20b209c11776a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start listening for connections.  <a href="#a9504758ea3570e62cb20b209c11776a1">More...</a><br /></td></tr>
+<tr class="separator:a9504758ea3570e62cb20b209c11776a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a00a850506bd0f9f48867a0fe59556b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1TcpListener.html#a3a00a850506bd0f9f48867a0fe59556b">close</a> ()</td></tr>
 <tr class="memdesc:a3a00a850506bd0f9f48867a0fe59556b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop listening and close the socket.  <a href="#a3a00a850506bd0f9f48867a0fe59556b">More...</a><br /></td></tr>
 <tr class="separator:a3a00a850506bd0f9f48867a0fe59556b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,7 +139,7 @@ Protected Member Functions</h2></td></tr>
 <p>Usage example: </p><div class="fragment"><div class="line"><span class="comment">// Create a listener socket and make it wait for new</span></div>
 <div class="line"><span class="comment">// connections on port 55001</span></div>
 <div class="line"><a class="code" href="classsf_1_1TcpListener.html">sf::TcpListener</a> listener;</div>
-<div class="line">listener.<a class="code" href="classsf_1_1TcpListener.html#a409d9350d3abfea9636df8cf4a61004e">listen</a>(55001);</div>
+<div class="line">listener.<a class="code" href="classsf_1_1TcpListener.html#a9504758ea3570e62cb20b209c11776a1">listen</a>(55001);</div>
 <div class="line"></div>
 <div class="line"><span class="comment">// Endless loop that waits for new connections</span></div>
 <div class="line"><span class="keywordflow">while</span> (running)</div>
@@ -153,7 +154,7 @@ Protected Member Functions</h2></td></tr>
 <div class="line">}</div>
 </div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1TcpSocket.html" title="Specialized socket using the TCP protocol. ">sf::TcpSocket</a>, <a class="el" href="classsf_1_1Socket.html" title="Base class for all the socket types. ">sf::Socket</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="TcpListener_8hpp_source.html#l00043">43</a> of file <a class="el" href="TcpListener_8hpp_source.html">TcpListener.hpp</a>.</p>
+<p>Definition at line <a class="el" href="TcpListener_8hpp_source.html#l00044">44</a> of file <a class="el" href="TcpListener_8hpp_source.html">TcpListener.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a class="anchor" id="a5deb2c955fd347259c3a20d27b2481aa"></a>
 <div class="memitem">
@@ -299,7 +300,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Status code</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1TcpListener.html#a409d9350d3abfea9636df8cf4a61004e" title="Start listening for connections. ">listen</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1TcpListener.html#a9504758ea3570e62cb20b209c11776a1" title="Start listening for connections. ">listen</a> </dd></dl>
 
 </div>
 </div>
@@ -318,7 +319,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Stop listening and close the socket. </p>
 <p>This function gracefully stops the listener. If the socket is not listening, this function has no effect.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1TcpListener.html#a409d9350d3abfea9636df8cf4a61004e" title="Start listening for connections. ">listen</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1TcpListener.html#a9504758ea3570e62cb20b209c11776a1" title="Start listening for connections. ">listen</a> </dd></dl>
 
 </div>
 </div>
@@ -424,7 +425,7 @@ Protected Member Functions</h2></td></tr>
 <p>Get the port to which the socket is bound locally. </p>
 <p>If the socket is not listening to a port, this function returns 0.</p>
 <dl class="section return"><dt>Returns</dt><dd>Port to which the socket is bound</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1TcpListener.html#a409d9350d3abfea9636df8cf4a61004e" title="Start listening for connections. ">listen</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1TcpListener.html#a9504758ea3570e62cb20b209c11776a1" title="Start listening for connections. ">listen</a> </dd></dl>
 
 </div>
 </div>
@@ -455,7 +456,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a409d9350d3abfea9636df8cf4a61004e"></a>
+<a class="anchor" id="a9504758ea3570e62cb20b209c11776a1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -463,8 +464,18 @@ Protected Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="classsf_1_1Socket.html#a51bf0fd51057b98a10fbb866246176dc">Status</a> sf::TcpListener::listen </td>
           <td>(</td>
           <td class="paramtype">unsigned short&#160;</td>
-          <td class="paramname"><em>port</em></td><td>)</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="classsf_1_1IpAddress.html">IpAddress</a> &amp;&#160;</td>
+          <td class="paramname"><em>address</em> = <code><a class="el" href="classsf_1_1IpAddress.html#a3dbc10b0dc6804cc69e29342f7406907">IpAddress::Any</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -473,7 +484,8 @@ Protected Member Functions</h2></td></tr>
 <p>This functions makes the socket listen to the specified port, waiting for new connections. If the socket was previously listening to another port, it will be stopped first and bound to the new port.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">port</td><td>Port to listen for new connections</td></tr>
+    <tr><td class="paramname">port</td><td>Port to listen for new connections </td></tr>
+    <tr><td class="paramname">address</td><td>Address of the interface to listen on</td></tr>
   </table>
   </dd>
 </dl>

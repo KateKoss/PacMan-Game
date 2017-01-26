@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -94,9 +95,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2c4adb19dd4cbee0a588eeb85e52a249"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#a2c4adb19dd4cbee0a588eeb85e52a249">loadFromMemory</a> (const void *data, std::size_t size, const <a class="el" href="classsf_1_1Rect.html">IntRect</a> &amp;area=<a class="el" href="classsf_1_1Rect.html">IntRect</a>())</td></tr>
 <tr class="memdesc:a2c4adb19dd4cbee0a588eeb85e52a249"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the texture from a file in memory.  <a href="#a2c4adb19dd4cbee0a588eeb85e52a249">More...</a><br /></td></tr>
 <tr class="separator:a2c4adb19dd4cbee0a588eeb85e52a249"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6803a13465a7113a8964d1081841886d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#a6803a13465a7113a8964d1081841886d">loadFromStream</a> (<a class="el" href="classsf_1_1InputStream.html">sf::InputStream</a> &amp;stream, const <a class="el" href="classsf_1_1Rect.html">IntRect</a> &amp;area=<a class="el" href="classsf_1_1Rect.html">IntRect</a>())</td></tr>
-<tr class="memdesc:a6803a13465a7113a8964d1081841886d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the texture from a custom stream.  <a href="#a6803a13465a7113a8964d1081841886d">More...</a><br /></td></tr>
-<tr class="separator:a6803a13465a7113a8964d1081841886d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a786b486a46b1c6d1c16ff4af61ecc601"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#a786b486a46b1c6d1c16ff4af61ecc601">loadFromStream</a> (<a class="el" href="classsf_1_1InputStream.html">InputStream</a> &amp;stream, const <a class="el" href="classsf_1_1Rect.html">IntRect</a> &amp;area=<a class="el" href="classsf_1_1Rect.html">IntRect</a>())</td></tr>
+<tr class="memdesc:a786b486a46b1c6d1c16ff4af61ecc601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the texture from a custom stream.  <a href="#a786b486a46b1c6d1c16ff4af61ecc601">More...</a><br /></td></tr>
+<tr class="separator:a786b486a46b1c6d1c16ff4af61ecc601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abec4567ad9856a3596dc74803f26fba2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#abec4567ad9856a3596dc74803f26fba2">loadFromImage</a> (const <a class="el" href="classsf_1_1Image.html">Image</a> &amp;image, const <a class="el" href="classsf_1_1Rect.html">IntRect</a> &amp;area=<a class="el" href="classsf_1_1Rect.html">IntRect</a>())</td></tr>
 <tr class="memdesc:abec4567ad9856a3596dc74803f26fba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load the texture from an image.  <a href="#abec4567ad9856a3596dc74803f26fba2">More...</a><br /></td></tr>
 <tr class="separator:abec4567ad9856a3596dc74803f26fba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,12 +131,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1d6643d3c76f2be29dc401dc22749e16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#a1d6643d3c76f2be29dc401dc22749e16">isSmooth</a> () const </td></tr>
 <tr class="memdesc:a1d6643d3c76f2be29dc401dc22749e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell whether the smooth filter is enabled or not.  <a href="#a1d6643d3c76f2be29dc401dc22749e16">More...</a><br /></td></tr>
 <tr class="separator:a1d6643d3c76f2be29dc401dc22749e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8a38872c50a33ff074bd0865db19dd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#af8a38872c50a33ff074bd0865db19dd4">setSrgb</a> (bool sRgb)</td></tr>
+<tr class="memdesc:af8a38872c50a33ff074bd0865db19dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable conversion from sRGB.  <a href="#af8a38872c50a33ff074bd0865db19dd4">More...</a><br /></td></tr>
+<tr class="separator:af8a38872c50a33ff074bd0865db19dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71497736ee0593e493814c32678d981f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#a71497736ee0593e493814c32678d981f">isSrgb</a> () const </td></tr>
+<tr class="memdesc:a71497736ee0593e493814c32678d981f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell whether the texture source is converted from sRGB or not.  <a href="#a71497736ee0593e493814c32678d981f">More...</a><br /></td></tr>
+<tr class="separator:a71497736ee0593e493814c32678d981f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa87d1eff053b9d4d34a24c784a28658"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#aaa87d1eff053b9d4d34a24c784a28658">setRepeated</a> (bool repeated)</td></tr>
 <tr class="memdesc:aaa87d1eff053b9d4d34a24c784a28658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable repeating.  <a href="#aaa87d1eff053b9d4d34a24c784a28658">More...</a><br /></td></tr>
 <tr class="separator:aaa87d1eff053b9d4d34a24c784a28658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a007a19b48952b7854120bf423c102150"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#a007a19b48952b7854120bf423c102150">isRepeated</a> () const </td></tr>
 <tr class="memdesc:a007a19b48952b7854120bf423c102150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell whether the texture is repeated or not.  <a href="#a007a19b48952b7854120bf423c102150">More...</a><br /></td></tr>
 <tr class="separator:a007a19b48952b7854120bf423c102150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7779a75c0324b5faff77602f871710a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#a7779a75c0324b5faff77602f871710a9">generateMipmap</a> ()</td></tr>
+<tr class="memdesc:a7779a75c0324b5faff77602f871710a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a mipmap using the current texture data.  <a href="#a7779a75c0324b5faff77602f871710a9">More...</a><br /></td></tr>
+<tr class="separator:a7779a75c0324b5faff77602f871710a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80a089b6b19bb09b83012d5f0e6af9ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classsf_1_1Texture.html">Texture</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Texture.html#a80a089b6b19bb09b83012d5f0e6af9ba">operator=</a> (const <a class="el" href="classsf_1_1Texture.html">Texture</a> &amp;right)</td></tr>
 <tr class="memdesc:a80a089b6b19bb09b83012d5f0e6af9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of assignment operator.  <a href="#a80a089b6b19bb09b83012d5f0e6af9ba">More...</a><br /></td></tr>
 <tr class="separator:a80a089b6b19bb09b83012d5f0e6af9ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,7 +165,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:ae0efa7935241644608ca32ba47b22a33"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1GlResource.html#ae0efa7935241644608ca32ba47b22a33">ensureGlContext</a> ()</td></tr>
-<tr class="memdesc:ae0efa7935241644608ca32ba47b22a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure that a valid OpenGL context exists in the current thread.  <a href="#ae0efa7935241644608ca32ba47b22a33">More...</a><br /></td></tr>
+<tr class="memdesc:ae0efa7935241644608ca32ba47b22a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty function for ABI compatibility, use acquireTransientContext instead.  <a href="#ae0efa7935241644608ca32ba47b22a33">More...</a><br /></td></tr>
 <tr class="separator:ae0efa7935241644608ca32ba47b22a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
@@ -214,7 +224,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTarget</b></td
 <div class="line"></div>
 <div class="line">    ...</div>
 <div class="line">}</div>
-</div><!-- fragment --><p>Like <a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex and fragment) ">sf::Shader</a> that can be used as a raw OpenGL shader, <a class="el" href="classsf_1_1Texture.html" title="Image living on the graphics card that can be used for drawing. ">sf::Texture</a> can also be used directly as a raw texture for custom OpenGL geometry. </p><div class="fragment"><div class="line"><a class="code" href="classsf_1_1Texture.html#ae9a4274e7b95ebf7244d09c7445833b0">sf::Texture::bind</a>(&amp;texture);</div>
+</div><!-- fragment --><p>Like <a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex, geometry and fragment) ">sf::Shader</a> that can be used as a raw OpenGL shader, <a class="el" href="classsf_1_1Texture.html" title="Image living on the graphics card that can be used for drawing. ">sf::Texture</a> can also be used directly as a raw texture for custom OpenGL geometry. </p><div class="fragment"><div class="line"><a class="code" href="classsf_1_1Texture.html#ae9a4274e7b95ebf7244d09c7445833b0">sf::Texture::bind</a>(&amp;texture);</div>
 <div class="line">... render OpenGL geometry ...</div>
 <div class="line">sf::Texture::bind(NULL);</div>
 </div><!-- fragment --><dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Sprite.html" title="Drawable representation of a texture, with its own transformations, color, etc. ">sf::Sprite</a>, <a class="el" href="classsf_1_1Image.html" title="Class for loading, manipulating and saving images. ">sf::Image</a>, <a class="el" href="classsf_1_1RenderTexture.html" title="Target for off-screen 2D rendering into a texture. ">sf::RenderTexture</a> </dd></dl>
@@ -416,6 +426,26 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTarget</b></td
 
 </div>
 </div>
+<a class="anchor" id="a7779a75c0324b5faff77602f871710a9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sf::Texture::generateMipmap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a mipmap using the current texture data. </p>
+<p>Mipmaps are pre-computed chains of optimized textures. Each level of texture in a mipmap is generated by halving each of the previous level's dimensions. This is done until the final level has the size of 1x1. The textures generated in this process may make use of more advanced filters which might improve the visual quality of textures when they are applied to objects much smaller than they are. This is known as minification. Because fewer texels (texture elements) have to be sampled from when heavily minified, usage of mipmaps can also improve rendering performance in certain scenarios.</p>
+<p>Mipmap generation relies on the necessary OpenGL extension being available. If it is unavailable or generation fails due to another reason, this function will return false. Mipmap data is only valid from the time it is generated until the next time the base level image is modified, at which point this function will have to be called again to regenerate it.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if mipmap generation was successful, false if unsuccessful </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a0bf905d487b104b758549c2e9e20a3fb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -439,7 +469,6 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTarget</b></td
 
 <p>Get the maximum texture size allowed. </p>
 <p>This maximum size is defined by the graphics driver. You can expect a value of 512 pixels for low-end graphics card, and up to 8192 pixels or more for newer hardware.</p>
-<p>Note: The first call to this function, whether by your code or SFML will result in a context switch.</p>
 <dl class="section return"><dt>Returns</dt><dd>Maximum size allowed for textures, in pixels </dd></dl>
 
 </div>
@@ -519,6 +548,25 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTarget</b></td
 
 </div>
 </div>
+<a class="anchor" id="a71497736ee0593e493814c32678d981f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sf::Texture::isSrgb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tell whether the texture source is converted from sRGB or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the texture source is converted from sRGB, false if not</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Texture.html#af8a38872c50a33ff074bd0865db19dd4" title="Enable or disable conversion from sRGB. ">setSrgb</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a8e1b56eabfe33e2e0e1cb03712c7fcc7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -558,7 +606,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTarget</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if loading was successful</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Texture.html#a2c4adb19dd4cbee0a588eeb85e52a249" title="Load the texture from a file in memory. ">loadFromMemory</a>, <a class="el" href="classsf_1_1Texture.html#a6803a13465a7113a8964d1081841886d" title="Load the texture from a custom stream. ">loadFromStream</a>, <a class="el" href="classsf_1_1Texture.html#abec4567ad9856a3596dc74803f26fba2" title="Load the texture from an image. ">loadFromImage</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Texture.html#a2c4adb19dd4cbee0a588eeb85e52a249" title="Load the texture from a file in memory. ">loadFromMemory</a>, <a class="el" href="classsf_1_1Texture.html#a786b486a46b1c6d1c16ff4af61ecc601" title="Load the texture from a custom stream. ">loadFromStream</a>, <a class="el" href="classsf_1_1Texture.html#abec4567ad9856a3596dc74803f26fba2" title="Load the texture from an image. ">loadFromImage</a> </dd></dl>
 
 </div>
 </div>
@@ -648,18 +696,18 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTarget</b></td
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if loading was successful</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Texture.html#a8e1b56eabfe33e2e0e1cb03712c7fcc7" title="Load the texture from a file on disk. ">loadFromFile</a>, <a class="el" href="classsf_1_1Texture.html#a6803a13465a7113a8964d1081841886d" title="Load the texture from a custom stream. ">loadFromStream</a>, <a class="el" href="classsf_1_1Texture.html#abec4567ad9856a3596dc74803f26fba2" title="Load the texture from an image. ">loadFromImage</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Texture.html#a8e1b56eabfe33e2e0e1cb03712c7fcc7" title="Load the texture from a file on disk. ">loadFromFile</a>, <a class="el" href="classsf_1_1Texture.html#a786b486a46b1c6d1c16ff4af61ecc601" title="Load the texture from a custom stream. ">loadFromStream</a>, <a class="el" href="classsf_1_1Texture.html#abec4567ad9856a3596dc74803f26fba2" title="Load the texture from an image. ">loadFromImage</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a6803a13465a7113a8964d1081841886d"></a>
+<a class="anchor" id="a786b486a46b1c6d1c16ff4af61ecc601"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool sf::Texture::loadFromStream </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsf_1_1InputStream.html">sf::InputStream</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classsf_1_1InputStream.html">InputStream</a> &amp;&#160;</td>
           <td class="paramname"><em>stream</em>, </td>
         </tr>
         <tr>
@@ -769,6 +817,34 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>RenderTarget</b></td
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Texture.html#a1d6643d3c76f2be29dc401dc22749e16" title="Tell whether the smooth filter is enabled or not. ">isSmooth</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af8a38872c50a33ff074bd0865db19dd4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sf::Texture::setSrgb </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>sRgb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable or disable conversion from sRGB. </p>
+<p>When providing texture data from an image file or memory, it can either be stored in a linear color space or an sRGB color space. Most digital images account for gamma correction already, so they would need to be "uncorrected" back to linear color space before being processed by the hardware. The hardware can automatically convert it from the sRGB color space to a linear color space when it gets sampled. When the rendered image gets output to the final framebuffer, it gets converted back to sRGB.</p>
+<p>After enabling or disabling sRGB conversion, make sure to reload the texture data in order for the setting to take effect.</p>
+<p>This option is only useful in conjunction with an sRGB capable framebuffer. This can be requested during window creation.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sRgb</td><td>True to enable sRGB conversion, false to disable it</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Texture.html#a71497736ee0593e493814c32678d981f" title="Tell whether the texture source is converted from sRGB or not. ">isSrgb</a> </dd></dl>
 
 </div>
 </div>

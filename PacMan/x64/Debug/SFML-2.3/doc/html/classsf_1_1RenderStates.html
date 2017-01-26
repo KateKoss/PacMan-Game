@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -88,7 +89,7 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a457fc5a41731889de9cf39cf9b3436c3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsf_1_1Texture.html" title="Image living on the graphics card that can be used for drawing. ">Texture</a>.  <a href="#a457fc5a41731889de9cf39cf9b3436c3">More...</a><br /></td></tr>
 <tr class="separator:a457fc5a41731889de9cf39cf9b3436c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4f79ecdd0c60ed0d24fbe555b221bd8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classsf_1_1Shader.html">Shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1RenderStates.html#ad4f79ecdd0c60ed0d24fbe555b221bd8">shader</a></td></tr>
-<tr class="memdesc:ad4f79ecdd0c60ed0d24fbe555b221bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex and fragment) ">Shader</a>.  <a href="#ad4f79ecdd0c60ed0d24fbe555b221bd8">More...</a><br /></td></tr>
+<tr class="memdesc:ad4f79ecdd0c60ed0d24fbe555b221bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex, geometry and fragment) ">Shader</a>.  <a href="#ad4f79ecdd0c60ed0d24fbe555b221bd8">More...</a><br /></td></tr>
 <tr class="separator:ad4f79ecdd0c60ed0d24fbe555b221bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -108,7 +109,7 @@ Static Public Attributes</h2></td></tr>
 </ul>
 <p>High-level objects such as sprites or text force some of these states when they are drawn. For example, a sprite will set its own texture, so that you don't have to care about it when drawing the sprite.</p>
 <p>The transform is a special case: sprites, texts and shapes (and it's a good idea to do it with your own drawable classes too) combine their transform with the one that is passed in the <a class="el" href="classsf_1_1RenderStates.html" title="Define the states used for drawing to a RenderTarget. ">RenderStates</a> structure. So that you can use a "global" transform on top of each object's transform.</p>
-<p>Most objects, especially high-level drawables, can be drawn directly without defining render states explicitly &ndash; the default set of states is ok in most cases. </p><div class="fragment"><div class="line">window.Draw(sprite);</div>
+<p>Most objects, especially high-level drawables, can be drawn directly without defining render states explicitly &ndash; the default set of states is ok in most cases. </p><div class="fragment"><div class="line">window.draw(sprite);</div>
 </div><!-- fragment --><p>If you want to use a single specific render state, for example a shader, you can pass it directly to the Draw function: <a class="el" href="classsf_1_1RenderStates.html" title="Define the states used for drawing to a RenderTarget. ">sf::RenderStates</a> has an implicit one-argument constructor for each state. </p><div class="fragment"><div class="line">window.draw(sprite, <a class="code" href="classsf_1_1RenderStates.html#ad4f79ecdd0c60ed0d24fbe555b221bd8">shader</a>);</div>
 </div><!-- fragment --><p>When you're inside the Draw function of a drawable object (inherited from <a class="el" href="classsf_1_1Drawable.html" title="Abstract base class for objects that can be drawn to a render target. ">sf::Drawable</a>), you can either pass the render states unmodified, or change some of them. For example, a transformable object will combine the current transform with its own transform. A sprite will set its texture. Etc.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1RenderTarget.html" title="Base class for all render targets (window, texture, ...) ">sf::RenderTarget</a>, <a class="el" href="classsf_1_1Drawable.html" title="Abstract base class for objects that can be drawn to a render target. ">sf::Drawable</a> </dd></dl>
@@ -227,7 +228,7 @@ Static Public Attributes</h2></td></tr>
 <p>Construct a default set of render states with a custom shader. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">theShader</td><td><a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex and fragment) ">Shader</a> to use </td></tr>
+    <tr><td class="paramname">theShader</td><td><a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex, geometry and fragment) ">Shader</a> to use </td></tr>
   </table>
   </dd>
 </dl>
@@ -276,7 +277,7 @@ Static Public Attributes</h2></td></tr>
     <tr><td class="paramname">theBlendMode</td><td>Blend mode to use </td></tr>
     <tr><td class="paramname">theTransform</td><td><a class="el" href="classsf_1_1Transform.html" title="Define a 3x3 transform matrix. ">Transform</a> to use </td></tr>
     <tr><td class="paramname">theTexture</td><td><a class="el" href="classsf_1_1Texture.html" title="Image living on the graphics card that can be used for drawing. ">Texture</a> to use </td></tr>
-    <tr><td class="paramname">theShader</td><td><a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex and fragment) ">Shader</a> to use </td></tr>
+    <tr><td class="paramname">theShader</td><td><a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex, geometry and fragment) ">Shader</a> to use </td></tr>
   </table>
   </dd>
 </dl>
@@ -334,7 +335,7 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex and fragment) ">Shader</a>. </p>
+<p><a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex, geometry and fragment) ">Shader</a>. </p>
 
 <p>Definition at line <a class="el" href="RenderStates_8hpp_source.html#l00118">118</a> of file <a class="el" href="RenderStates_8hpp_source.html">RenderStates.hpp</a>.</p>
 

@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -66,9 +67,9 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa0174eb022a15d951837297fba753186"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsf_1_1ContextSettings.html#aa0174eb022a15d951837297fba753186">ContextSettings</a> (unsigned int depth=0, unsigned int stencil=0, unsigned int antialiasing=0, unsigned int major=1, unsigned int minor=1, unsigned int attributes=<a class="el" href="structsf_1_1ContextSettings.html#af2e91e57e8d26c40afe2ec8efaa32a2cabf868dcb751b909bf031484ed42a93bb">Default</a>)</td></tr>
-<tr class="memdesc:aa0174eb022a15d951837297fba753186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#aa0174eb022a15d951837297fba753186">More...</a><br /></td></tr>
-<tr class="separator:aa0174eb022a15d951837297fba753186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56869ccbb6bf0df48b88880754e12b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsf_1_1ContextSettings.html#ac56869ccbb6bf0df48b88880754e12b7">ContextSettings</a> (unsigned int depth=0, unsigned int stencil=0, unsigned int antialiasing=0, unsigned int major=1, unsigned int minor=1, unsigned int attributes=<a class="el" href="structsf_1_1ContextSettings.html#af2e91e57e8d26c40afe2ec8efaa32a2cabf868dcb751b909bf031484ed42a93bb">Default</a>, bool sRgb=false)</td></tr>
+<tr class="memdesc:ac56869ccbb6bf0df48b88880754e12b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="#ac56869ccbb6bf0df48b88880754e12b7">More...</a><br /></td></tr>
+<tr class="separator:ac56869ccbb6bf0df48b88880754e12b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -90,6 +91,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0ef3fc53802bc0197d2739466915ada5"><td class="memItemLeft" align="right" valign="top">Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsf_1_1ContextSettings.html#a0ef3fc53802bc0197d2739466915ada5">attributeFlags</a></td></tr>
 <tr class="memdesc:a0ef3fc53802bc0197d2739466915ada5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The attribute flags to create the context with.  <a href="#a0ef3fc53802bc0197d2739466915ada5">More...</a><br /></td></tr>
 <tr class="separator:a0ef3fc53802bc0197d2739466915ada5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac93b041bfb6cbd36034997797708a0a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsf_1_1ContextSettings.html#ac93b041bfb6cbd36034997797708a0a3">sRgbCapable</a></td></tr>
+<tr class="memdesc:ac93b041bfb6cbd36034997797708a0a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the context framebuffer is sRGB capable.  <a href="#ac93b041bfb6cbd36034997797708a0a3">More...</a><br /></td></tr>
+<tr class="separator:ac93b041bfb6cbd36034997797708a0a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure defining the settings of the OpenGL context attached to a window. </p>
@@ -133,7 +137,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa0174eb022a15d951837297fba753186"></a>
+<a class="anchor" id="ac56869ccbb6bf0df48b88880754e12b7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -174,7 +178,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>attributes</em> = <code><a class="el" href="structsf_1_1ContextSettings.html#af2e91e57e8d26c40afe2ec8efaa32a2cabf868dcb751b909bf031484ed42a93bb">Default</a></code>&#160;</td>
+          <td class="paramname"><em>attributes</em> = <code><a class="el" href="structsf_1_1ContextSettings.html#af2e91e57e8d26c40afe2ec8efaa32a2cabf868dcb751b909bf031484ed42a93bb">Default</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>sRgb</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -198,11 +208,12 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">major</td><td>Major number of the context version </td></tr>
     <tr><td class="paramname">minor</td><td>Minor number of the context version </td></tr>
     <tr><td class="paramname">attributes</td><td>Attribute flags of the context </td></tr>
+    <tr><td class="paramname">sRgb</td><td>sRGB capable framebuffer </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00060">60</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00061">61</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
 
 </div>
 </div>
@@ -219,7 +230,7 @@ Public Attributes</h2></td></tr>
 
 <p>Level of antialiasing. </p>
 
-<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00075">75</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00077">77</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
 
 </div>
 </div>
@@ -235,7 +246,7 @@ Public Attributes</h2></td></tr>
 
 <p>The attribute flags to create the context with. </p>
 
-<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00078">78</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00080">80</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
 
 </div>
 </div>
@@ -251,7 +262,7 @@ Public Attributes</h2></td></tr>
 
 <p>Bits of the depth buffer. </p>
 
-<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00073">73</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00075">75</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
 
 </div>
 </div>
@@ -267,7 +278,7 @@ Public Attributes</h2></td></tr>
 
 <p>Major number of the context version to create. </p>
 
-<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00076">76</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00078">78</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
 
 </div>
 </div>
@@ -283,7 +294,23 @@ Public Attributes</h2></td></tr>
 
 <p>Minor number of the context version to create. </p>
 
-<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00077">77</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00079">79</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac93b041bfb6cbd36034997797708a0a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sf::ContextSettings::sRgbCapable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Whether the context framebuffer is sRGB capable. </p>
+
+<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00081">81</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
 
 </div>
 </div>
@@ -299,7 +326,7 @@ Public Attributes</h2></td></tr>
 
 <p>Bits of the stencil buffer. </p>
 
-<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00074">74</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ContextSettings_8hpp_source.html#l00076">76</a> of file <a class="el" href="ContextSettings_8hpp_source.html">ContextSettings.hpp</a>.</p>
 
 </div>
 </div>

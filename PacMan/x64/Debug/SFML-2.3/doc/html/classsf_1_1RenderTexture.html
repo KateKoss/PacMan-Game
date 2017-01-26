@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -87,8 +88,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae480a2ec7ee166afa50232e634d2668c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1RenderTexture.html#ae480a2ec7ee166afa50232e634d2668c">isRepeated</a> () const </td></tr>
 <tr class="memdesc:ae480a2ec7ee166afa50232e634d2668c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell whether the texture is repeated or not.  <a href="#ae480a2ec7ee166afa50232e634d2668c">More...</a><br /></td></tr>
 <tr class="separator:ae480a2ec7ee166afa50232e634d2668c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ca34c8b7e00793c1d3ef4f9a834f8cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1RenderTexture.html#a8ca34c8b7e00793c1d3ef4f9a834f8cc">generateMipmap</a> ()</td></tr>
+<tr class="memdesc:a8ca34c8b7e00793c1d3ef4f9a834f8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a mipmap using the current texture data.  <a href="#a8ca34c8b7e00793c1d3ef4f9a834f8cc">More...</a><br /></td></tr>
+<tr class="separator:a8ca34c8b7e00793c1d3ef4f9a834f8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5da95ecdbce615a80bb78399012508cf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1RenderTexture.html#a5da95ecdbce615a80bb78399012508cf">setActive</a> (bool active=true)</td></tr>
-<tr class="memdesc:a5da95ecdbce615a80bb78399012508cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate of deactivate the render-texture for rendering.  <a href="#a5da95ecdbce615a80bb78399012508cf">More...</a><br /></td></tr>
+<tr class="memdesc:a5da95ecdbce615a80bb78399012508cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate or deactivate the render-texture for rendering.  <a href="#a5da95ecdbce615a80bb78399012508cf">More...</a><br /></td></tr>
 <tr class="separator:a5da95ecdbce615a80bb78399012508cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af92886d5faef3916caff9fa9ab32c555"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1RenderTexture.html#af92886d5faef3916caff9fa9ab32c555">display</a> ()</td></tr>
 <tr class="memdesc:af92886d5faef3916caff9fa9ab32c555"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the contents of the target texture.  <a href="#af92886d5faef3916caff9fa9ab32c555">More...</a><br /></td></tr>
@@ -436,6 +440,25 @@ Protected Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ca34c8b7e00793c1d3ef4f9a834f8cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sf::RenderTexture::generateMipmap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a mipmap using the current texture data. </p>
+<p>This function is similar to <a class="el" href="classsf_1_1Texture.html#a7779a75c0324b5faff77602f871710a9" title="Generate a mipmap using the current texture data. ">Texture::generateMipmap</a> and operates on the texture used as the target for drawing. Be aware that any draw operation may modify the base level image data. For this reason, calling this function only makes sense after all drawing is completed and display has been called. Not calling display after subsequent drawing will lead to undefined behavior if a mipmap had been previously generated.</p>
+<dl class="section return"><dt>Returns</dt><dd>True if mipmap generation was successful, false if unsuccessful </dd></dl>
 
 </div>
 </div>
@@ -918,7 +941,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Activate of deactivate the render-texture for rendering. </p>
+<p>Activate or deactivate the render-texture for rendering. </p>
 <p>This function makes the render-texture's context current for future OpenGL rendering operations (so you shouldn't care about it if you're not doing direct OpenGL stuff). Only one context can be current in a thread, so if you want to draw OpenGL geometry to another render target (like a <a class="el" href="classsf_1_1RenderWindow.html" title="Window that can serve as a target for 2D drawing. ">RenderWindow</a>) don't forget to activate it again.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

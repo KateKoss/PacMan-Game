@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -43,7 +44,7 @@
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// SFML - Simple and Fast Multimedia Library</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Copyright (C) 2007-2016 Laurent Gomila (laurent@sfml-dev.org)</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// This software is provided &#39;as-is&#39;, without any express or implied warranty.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// In no event will the authors be held liable for any damages arising from the use of this software.</span></div>
@@ -244,15 +245,16 @@
 <div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span>DataChannel;</div>
 <div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;</div>
 <div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;    <span class="comment">// Member data</span></div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;<span class="comment"></span>    <a class="code" href="classsf_1_1TcpSocket.html">TcpSocket</a> m_commandSocket; </div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;};</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;} <span class="comment">// namespace sf</span></div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;<span class="comment"></span>    <a class="code" href="classsf_1_1TcpSocket.html">TcpSocket</a>   m_commandSocket; </div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    std::string m_receiveBuffer; </div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;};</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;} <span class="comment">// namespace sf</span></div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;<span class="preprocessor">#endif // SFML_FTP_HPP</span></div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;<span class="preprocessor">#endif // SFML_FTP_HPP</span></div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;</div>
 <div class="ttc" id="classsf_1_1Ftp_1_1DirectoryResponse_html"><div class="ttname"><a href="classsf_1_1Ftp_1_1DirectoryResponse.html">sf::Ftp::DirectoryResponse</a></div><div class="ttdoc">Specialization of FTP response returning a directory. </div><div class="ttdef"><b>Definition:</b> <a href="Ftp_8hpp_source.html#l00188">Ftp.hpp:188</a></div></div>
 <div class="ttc" id="classsf_1_1Time_html"><div class="ttname"><a href="classsf_1_1Time.html">sf::Time</a></div><div class="ttdoc">Represents a time value. </div><div class="ttdef"><b>Definition:</b> <a href="Time_8hpp_source.html#l00040">Time.hpp:40</a></div></div>
 <div class="ttc" id="classsf_1_1Ftp_html"><div class="ttname"><a href="classsf_1_1Ftp.html">sf::Ftp</a></div><div class="ttdoc">A FTP client. </div><div class="ttdef"><b>Definition:</b> <a href="Ftp_8hpp_source.html#l00047">Ftp.hpp:47</a></div></div>

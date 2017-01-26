@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -41,6 +42,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classsf_1_1GlResource-members.html">List of all members</a>  </div>
@@ -60,13 +62,19 @@ Inheritance diagram for sf::GlResource:</div>
   <img src="classsf_1_1GlResource.png" usemap="#sf::GlResource_map" alt=""/>
   <map id="sf::GlResource_map" name="sf::GlResource_map">
 <area href="classsf_1_1Context.html" title="Class holding a valid drawing context. " alt="sf::Context" shape="rect" coords="0,56,113,80"/>
-<area href="classsf_1_1Shader.html" title="Shader class (vertex and fragment) " alt="sf::Shader" shape="rect" coords="123,56,236,80"/>
+<area href="classsf_1_1Shader.html" title="Shader class (vertex, geometry and fragment) " alt="sf::Shader" shape="rect" coords="123,56,236,80"/>
 <area href="classsf_1_1Texture.html" title="Image living on the graphics card that can be used for drawing. " alt="sf::Texture" shape="rect" coords="246,56,359,80"/>
 <area href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. " alt="sf::Window" shape="rect" coords="369,56,482,80"/>
 <area href="classsf_1_1RenderWindow.html" title="Window that can serve as a target for 2D drawing. " alt="sf::RenderWindow" shape="rect" coords="369,112,482,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1GlResource_1_1TransientContextLock.html">TransientContextLock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">RAII helper class to temporarily lock an available context for use.  <a href="classsf_1_1GlResource_1_1TransientContextLock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ad8fb7a0674f0f77e530dacc2a3b0dc6a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1GlResource.html#ad8fb7a0674f0f77e530dacc2a3b0dc6a">GlResource</a> ()</td></tr>
@@ -79,14 +87,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae0efa7935241644608ca32ba47b22a33"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1GlResource.html#ae0efa7935241644608ca32ba47b22a33">ensureGlContext</a> ()</td></tr>
-<tr class="memdesc:ae0efa7935241644608ca32ba47b22a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure that a valid OpenGL context exists in the current thread.  <a href="#ae0efa7935241644608ca32ba47b22a33">More...</a><br /></td></tr>
+<tr class="memdesc:ae0efa7935241644608ca32ba47b22a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Empty function for ABI compatibility, use acquireTransientContext instead.  <a href="#ae0efa7935241644608ca32ba47b22a33">More...</a><br /></td></tr>
 <tr class="separator:ae0efa7935241644608ca32ba47b22a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for classes that require an OpenGL context. </p>
 <p>This class is for internal use only, it must be the base of every class that requires a valid OpenGL context in order to work.</p>
 
-<p>Definition at line <a class="el" href="GlResource_8hpp_source.html#l00040">40</a> of file <a class="el" href="GlResource_8hpp_source.html">GlResource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="GlResource_8hpp_source.html#l00044">44</a> of file <a class="el" href="GlResource_8hpp_source.html">GlResource.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ad8fb7a0674f0f77e530dacc2a3b0dc6a"></a>
 <div class="memitem">
@@ -160,7 +168,7 @@ Static Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Make sure that a valid OpenGL context exists in the current thread. </p>
+<p>Empty function for ABI compatibility, use acquireTransientContext instead. </p>
 
 </div>
 </div>

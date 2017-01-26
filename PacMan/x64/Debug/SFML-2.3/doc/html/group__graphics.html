@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -29,6 +30,7 @@
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
@@ -39,6 +41,12 @@
 <p>2D graphics module: sprites, text, shapes, ...  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacesf_1_1Glsl"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesf_1_1Glsl.html">sf::Glsl</a></td></tr>
+<tr class="memdesc:namespacesf_1_1Glsl"><td class="mdescLeft">&#160;</td><td class="mdescRight">Namespace with GLSL types. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsf_1_1BlendMode.html">sf::BlendMode</a></td></tr>
@@ -84,7 +92,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. ">Window</a> that can serve as a target for 2D drawing.  <a href="classsf_1_1RenderWindow.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Shader.html">sf::Shader</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex and fragment) ">Shader</a> class (vertex and fragment)  <a href="classsf_1_1Shader.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsf_1_1Shader.html" title="Shader class (vertex, geometry and fragment) ">Shader</a> class (vertex, geometry and fragment)  <a href="classsf_1_1Shader.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Shape.html">sf::Shape</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for textured shapes with outline.  <a href="classsf_1_1Shape.html#details">More...</a><br /></td></tr>
@@ -119,12 +127,16 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga5ee56ac1339984909610713096283b1b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__graphics.html#ga5ee56ac1339984909610713096283b1b">sf::PrimitiveType</a> { <br />
 &#160;&#160;<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1bac7097d3e01778b9318def1f7ac35a785">sf::Points</a>, 
 <a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba2bf015eeff9f798dfc3d6d744d669f1e">sf::Lines</a>, 
-<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba5b09910f5d0f39641342184ccd0d1de3">sf::LinesStrip</a>, 
+<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba14d9eeec2c7c314f239a57bde35949fa">sf::LineStrip</a>, 
 <a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba880a7aa72c20b9f9beb7eb64d2434670">sf::Triangles</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba66643dbbb24bbacb405973ed80eebae0">sf::TrianglesStrip</a>, 
-<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba5338a2c6d922151fe50f235036af8a20">sf::TrianglesFan</a>, 
-<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba5041359b76b4bd3d3e6ef738826b8743">sf::Quads</a>
+&#160;&#160;<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba05e55fec6d32c2fc8328f94d07f91184">sf::TriangleStrip</a>, 
+<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba363f7762b33706c805c6a451ad554f5e">sf::TriangleFan</a>, 
+<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba5041359b76b4bd3d3e6ef738826b8743">sf::Quads</a>, 
+<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba5b09910f5d0f39641342184ccd0d1de3">sf::LinesStrip</a> = LineStrip, 
+<br />
+&#160;&#160;<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba66643dbbb24bbacb405973ed80eebae0">sf::TrianglesStrip</a> = TriangleStrip, 
+<a class="el" href="group__graphics.html#gga5ee56ac1339984909610713096283b1ba5338a2c6d922151fe50f235036af8a20">sf::TrianglesFan</a> = TriangleFan
 <br />
  }</td></tr>
 <tr class="memdesc:ga5ee56ac1339984909610713096283b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of primitives that a <a class="el" href="classsf_1_1VertexArray.html" title="Define a set of one or more 2D primitives. ">sf::VertexArray</a> can render.  <a href="group__graphics.html#ga5ee56ac1339984909610713096283b1b">More...</a><br /></td></tr>
@@ -152,20 +164,29 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba2bf015eeff9f798dfc3d6d744d669f1e"></a>Lines&#160;</td><td class="fielddoc">
 <p>List of individual lines. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba5b09910f5d0f39641342184ccd0d1de3"></a>LinesStrip&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba14d9eeec2c7c314f239a57bde35949fa"></a>LineStrip&#160;</td><td class="fielddoc">
 <p>List of connected lines, a point uses the previous point to form a line. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba880a7aa72c20b9f9beb7eb64d2434670"></a>Triangles&#160;</td><td class="fielddoc">
 <p>List of individual triangles. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba66643dbbb24bbacb405973ed80eebae0"></a>TrianglesStrip&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba05e55fec6d32c2fc8328f94d07f91184"></a>TriangleStrip&#160;</td><td class="fielddoc">
 <p>List of connected triangles, a point uses the two previous points to form a triangle. </p>
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba5338a2c6d922151fe50f235036af8a20"></a>TrianglesFan&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba363f7762b33706c805c6a451ad554f5e"></a>TriangleFan&#160;</td><td class="fielddoc">
 <p>List of connected triangles, a point uses the common center and the previous point to form a triangle. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba5041359b76b4bd3d3e6ef738826b8743"></a>Quads&#160;</td><td class="fielddoc">
 <p>List of individual quads (deprecated, don't work with OpenGL ES) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba5b09910f5d0f39641342184ccd0d1de3"></a>LinesStrip&#160;</td><td class="fielddoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Use LineStrip instead </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba66643dbbb24bbacb405973ed80eebae0"></a>TrianglesStrip&#160;</td><td class="fielddoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000002">Deprecated:</a></b></dt><dd>Use TriangleStrip instead </dd></dl>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga5ee56ac1339984909610713096283b1ba5338a2c6d922151fe50f235036af8a20"></a>TrianglesFan&#160;</td><td class="fielddoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000003">Deprecated:</a></b></dt><dd>Use TriangleFan instead </dd></dl>
 </td></tr>
 </table>
 

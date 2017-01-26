@@ -136,13 +136,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>SFML_DYNAMIC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>.\x64\Debug\SFML-2.3\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\x64\Debug\SFML-2.3\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>.\x64\Debug\SFML-2.3\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;sfml-graphics-d.lib</AdditionalDependencies>
+      <AdditionalDependencies>sfml-main.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;sfml-graphics-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
@@ -224,6 +224,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="x64\Debug\CyrilicOld.TTF" />
+    <Font Include="x64\Debug\OffsetPlain.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PacMan.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\bigPoint.png" />
+    <Image Include="images\over.png" />
+    <Image Include="images\Pac_Man_Sprites1.png" />
+    <Image Include="images\point.png" />
+    <Image Include="images\win.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

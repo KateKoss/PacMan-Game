@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -44,7 +45,7 @@
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classsf_1_1FileInputStream-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">sf::FileInputStream Class Reference</div>  </div>
+<div class="title">sf::FileInputStream Class Reference<div class="ingroups"><a class="el" href="group__system.html">System module</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -89,6 +90,16 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of input stream based on a file. </p>
+<p>This class is a specialization of <a class="el" href="classsf_1_1InputStream.html" title="Abstract class for custom file input streams. ">InputStream</a> that reads from a file on disk.</p>
+<p>It wraps a file in the common <a class="el" href="classsf_1_1InputStream.html" title="Abstract class for custom file input streams. ">InputStream</a> interface and therefore allows to use generic classes or functions that accept such a stream, with a file on disk as the data source.</p>
+<p>In addition to the virtual functions inherited from <a class="el" href="classsf_1_1InputStream.html" title="Abstract class for custom file input streams. ">InputStream</a>, <a class="el" href="classsf_1_1FileInputStream.html" title="Implementation of input stream based on a file. ">FileInputStream</a> adds a function to specify the file to open.</p>
+<p>SFML resource classes can usually be loaded directly from a filename, so this class shouldn't be useful to you unless you create your own algorithms that operate on an <a class="el" href="classsf_1_1InputStream.html" title="Abstract class for custom file input streams. ">InputStream</a>.</p>
+<p>Usage example: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> process(InputStream&amp; stream);</div>
+<div class="line"></div>
+<div class="line"><a class="code" href="classsf_1_1FileInputStream.html#a9a321e273f41ff7f187899061fcae9be">FileInputStream</a> stream;</div>
+<div class="line"><span class="keywordflow">if</span> (stream.open(<span class="stringliteral">&quot;some_file.dat&quot;</span>))</div>
+<div class="line">   process(stream);</div>
+</div><!-- fragment --><p><a class="el" href="classsf_1_1InputStream.html" title="Abstract class for custom file input streams. ">InputStream</a>, <a class="el" href="classsf_1_1MemoryInputStream.html" title="Implementation of input stream based on a memory chunk. ">MemoryInputStream</a> </p>
 
 <p>Definition at line <a class="el" href="FileInputStream_8hpp_source.html#l00055">55</a> of file <a class="el" href="FileInputStream_8hpp_source.html">FileInputStream.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>

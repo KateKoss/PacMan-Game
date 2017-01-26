@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -76,7 +77,8 @@ Public Types</h2></td></tr>
 <tr class="memdesc:afb9852caf356b53bb0de460c58a9ebbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of the blending factors.  <a href="structsf_1_1BlendMode.html#afb9852caf356b53bb0de460c58a9ebbb">More...</a><br /></td></tr>
 <tr class="separator:afb9852caf356b53bb0de460c58a9ebbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bce470e2e384c4f9c8d9595faef7c32"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsf_1_1BlendMode.html#a7bce470e2e384c4f9c8d9595faef7c32">Equation</a> { <a class="el" href="structsf_1_1BlendMode.html#a7bce470e2e384c4f9c8d9595faef7c32a50c081d8f36cf7b77632966e15d38966">Add</a>, 
-<a class="el" href="structsf_1_1BlendMode.html#a7bce470e2e384c4f9c8d9595faef7c32a14c825be24f8412fc5ed5b49f19bc0d0">Subtract</a>
+<a class="el" href="structsf_1_1BlendMode.html#a7bce470e2e384c4f9c8d9595faef7c32a14c825be24f8412fc5ed5b49f19bc0d0">Subtract</a>, 
+<a class="el" href="structsf_1_1BlendMode.html#a7bce470e2e384c4f9c8d9595faef7c32a2d04acf59e91811128e7d0ef076f65f0">ReverseSubtract</a>
  }</td></tr>
 <tr class="memdesc:a7bce470e2e384c4f9c8d9595faef7c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of the blending equations.  <a href="structsf_1_1BlendMode.html#a7bce470e2e384c4f9c8d9595faef7c32">More...</a><br /></td></tr>
 <tr class="separator:a7bce470e2e384c4f9c8d9595faef7c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +147,7 @@ Related Functions</h2></td></tr>
 <p>The most common blending modes are defined as constants in the sf namespace:</p>
 <div class="fragment"><div class="line"><a class="code" href="structsf_1_1BlendMode.html">sf::BlendMode</a> alphaBlending          = sf::BlendAlpha;</div>
 <div class="line"><a class="code" href="structsf_1_1BlendMode.html">sf::BlendMode</a> additiveBlending       = sf::BlendAdd;</div>
-<div class="line"><a class="code" href="structsf_1_1BlendMode.html">sf::BlendMode</a> multiplicativeBlending = sf::BlendMultipy;</div>
+<div class="line"><a class="code" href="structsf_1_1BlendMode.html">sf::BlendMode</a> multiplicativeBlending = sf::BlendMultiply;</div>
 <div class="line"><a class="code" href="structsf_1_1BlendMode.html">sf::BlendMode</a> noBlending             = sf::BlendNone;</div>
 </div><!-- fragment --><p>In SFML, a blend mode can be specified every time you draw a <a class="el" href="classsf_1_1Drawable.html" title="Abstract base class for objects that can be drawn to a render target. ">sf::Drawable</a> object to a render target. It is part of the <a class="el" href="classsf_1_1RenderStates.html" title="Define the states used for drawing to a RenderTarget. ">sf::RenderStates</a> compound that is passed to the member function <a class="el" href="classsf_1_1RenderTarget.html#a12417a3bcc245c41d957b29583556f39" title="Draw a drawable object to the render target. ">sf::RenderTarget::draw()</a>.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1RenderStates.html" title="Define the states used for drawing to a RenderTarget. ">sf::RenderStates</a>, <a class="el" href="classsf_1_1RenderTarget.html" title="Base class for all render targets (window, texture, ...) ">sf::RenderTarget</a> </dd></dl>
@@ -170,6 +172,9 @@ Related Functions</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a7bce470e2e384c4f9c8d9595faef7c32a14c825be24f8412fc5ed5b49f19bc0d0"></a>Subtract&#160;</td><td class="fielddoc">
 <p>Pixel = Src * SrcFactor - Dst * DstFactor. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="a7bce470e2e384c4f9c8d9595faef7c32a2d04acf59e91811128e7d0ef076f65f0"></a>ReverseSubtract&#160;</td><td class="fielddoc">
+<p>Pixel = Dst * DstFactor - Src * SrcFactor. </p>
 </td></tr>
 </table>
 
@@ -453,7 +458,7 @@ Related Functions</h2></td></tr>
 
 <p>Destination blending factor for the alpha channel. </p>
 
-<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00118">118</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00119">119</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
 
 </div>
 </div>
@@ -469,7 +474,7 @@ Related Functions</h2></td></tr>
 
 <p>Blending equation for the alpha channel. </p>
 
-<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00119">119</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00120">120</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
 
 </div>
 </div>
@@ -485,7 +490,7 @@ Related Functions</h2></td></tr>
 
 <p>Source blending factor for the alpha channel. </p>
 
-<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00117">117</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00118">118</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
 
 </div>
 </div>
@@ -501,7 +506,7 @@ Related Functions</h2></td></tr>
 
 <p>Destination blending factor for the color channels. </p>
 
-<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00115">115</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00116">116</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
 
 </div>
 </div>
@@ -517,7 +522,7 @@ Related Functions</h2></td></tr>
 
 <p>Blending equation for the color channels. </p>
 
-<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00116">116</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00117">117</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
 
 </div>
 </div>
@@ -533,7 +538,7 @@ Related Functions</h2></td></tr>
 
 <p>Source blending factor for the color channels. </p>
 
-<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00114">114</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
+<p>Definition at line <a class="el" href="BlendMode_8hpp_source.html#l00115">115</a> of file <a class="el" href="BlendMode_8hpp_source.html">BlendMode.hpp</a>.</p>
 
 </div>
 </div>

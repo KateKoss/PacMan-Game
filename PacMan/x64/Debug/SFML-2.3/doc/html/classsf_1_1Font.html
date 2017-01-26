@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -83,9 +84,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac4b60eeb5adfc98a2c7727a0f3ce1029"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structsf_1_1Font_1_1Info.html">Info</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Font.html#ac4b60eeb5adfc98a2c7727a0f3ce1029">getInfo</a> () const </td></tr>
 <tr class="memdesc:ac4b60eeb5adfc98a2c7727a0f3ce1029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the font information.  <a href="#ac4b60eeb5adfc98a2c7727a0f3ce1029">More...</a><br /></td></tr>
 <tr class="separator:ac4b60eeb5adfc98a2c7727a0f3ce1029"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a148eb92890113052f12f8a231ad619b9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classsf_1_1Glyph.html">Glyph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Font.html#a148eb92890113052f12f8a231ad619b9">getGlyph</a> (Uint32 codePoint, unsigned int characterSize, bool bold) const </td></tr>
-<tr class="memdesc:a148eb92890113052f12f8a231ad619b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a glyph of the font.  <a href="#a148eb92890113052f12f8a231ad619b9">More...</a><br /></td></tr>
-<tr class="separator:a148eb92890113052f12f8a231ad619b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa317dc5963cdd5f07057dc85b559472b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classsf_1_1Glyph.html">Glyph</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Font.html#aa317dc5963cdd5f07057dc85b559472b">getGlyph</a> (Uint32 codePoint, unsigned int characterSize, bool bold, float outlineThickness=0) const </td></tr>
+<tr class="memdesc:aa317dc5963cdd5f07057dc85b559472b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve a glyph of the font.  <a href="#aa317dc5963cdd5f07057dc85b559472b">More...</a><br /></td></tr>
+<tr class="separator:aa317dc5963cdd5f07057dc85b559472b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03b32e8cf6448d269f6dd9d69c138f68"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsf_1_1Font.html#a03b32e8cf6448d269f6dd9d69c138f68">getKerning</a> (Uint32 first, Uint32 second, unsigned int characterSize) const </td></tr>
 <tr class="memdesc:a03b32e8cf6448d269f6dd9d69c138f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the kerning offset of two glyphs.  <a href="#a03b32e8cf6448d269f6dd9d69c138f68">More...</a><br /></td></tr>
 <tr class="separator:a03b32e8cf6448d269f6dd9d69c138f68"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,7 +136,7 @@ Public Member Functions</h2></td></tr>
 <div class="line"><a class="code" href="classsf_1_1Text.html">sf::Text</a> text2;</div>
 <div class="line">text2.<a class="code" href="classsf_1_1Text.html#a2927805d1ae92d57f15034ea34756b81">setFont</a>(font);</div>
 <div class="line">text2.<a class="code" href="classsf_1_1Text.html#ae96f835fc1bff858f8a23c5b01eaaf7e">setCharacterSize</a>(50);</div>
-<div class="line">text1.<a class="code" href="classsf_1_1Text.html#ad791702bc2d1b6590a1719aa60635edf">setStyle</a>(<a class="code" href="classsf_1_1Text.html#aa8add4aef484c6e6b20faff07452bd82aee249eb803848723c542c2062ebe69d8">sf::Text::Italic</a>);</div>
+<div class="line">text2.<a class="code" href="classsf_1_1Text.html#ad791702bc2d1b6590a1719aa60635edf">setStyle</a>(<a class="code" href="classsf_1_1Text.html#aa8add4aef484c6e6b20faff07452bd82aee249eb803848723c542c2062ebe69d8">sf::Text::Italic</a>);</div>
 </div><!-- fragment --><p>Apart from loading font files, and passing them to instances of <a class="el" href="classsf_1_1Text.html" title="Graphical text that can be drawn to a render target. ">sf::Text</a>, you should normally not have to deal directly with this class. However, it may be useful to access the font metrics or rasterized glyphs for advanced usage.</p>
 <p>Note that if the font is a bitmap font, it is not scalable, thus not all requested sizes will be available to use. This needs to be taken into consideration when using <a class="el" href="classsf_1_1Text.html" title="Graphical text that can be drawn to a render target. ">sf::Text</a>. If you need to display text of a certain size, make sure the corresponding bitmap font that supports that size is used.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classsf_1_1Text.html" title="Graphical text that can be drawn to a render target. ">sf::Text</a> </dd></dl>
@@ -203,7 +204,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a148eb92890113052f12f8a231ad619b9"></a>
+<a class="anchor" id="aa317dc5963cdd5f07057dc85b559472b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -223,7 +224,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>bold</em>&#160;</td>
+          <td class="paramname"><em>bold</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>outlineThickness</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -235,11 +242,13 @@ Public Member Functions</h2></td></tr>
 
 <p>Retrieve a glyph of the font. </p>
 <p>If the font is a bitmap font, not all character sizes might be available. If the glyph is not available at the requested size, an empty glyph is returned.</p>
+<p>Be aware that using a negative value for the outline thickness will cause distorted rendering.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">codePoint</td><td>Unicode code point of the character to get </td></tr>
     <tr><td class="paramname">characterSize</td><td>Reference character size </td></tr>
-    <tr><td class="paramname">bold</td><td>Retrieve the bold version or the regular one?</td></tr>
+    <tr><td class="paramname">bold</td><td>Retrieve the bold version or the regular one? </td></tr>
+    <tr><td class="paramname">outlineThickness</td><td>Thickness of outline (when != 0 the glyph will not be filled)</td></tr>
   </table>
   </dd>
 </dl>
@@ -431,6 +440,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Load the font from a file. </p>
 <p>The supported font formats are: TrueType, Type 1, CFF, OpenType, SFNT, X11 PCF, Windows FNT, BDF, PFR and Type 42. Note that this function know nothing about the standard fonts installed on the user's system, thus you can't load them directly.</p>
+<dl class="section warning"><dt>Warning</dt><dd>SFML cannot preload all the font data in this function, so the file has to remain accessible until the <a class="el" href="classsf_1_1Font.html" title="Class for loading and manipulating character fonts. ">sf::Font</a> object loads a new font or is destroyed.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>Path of the font file to load</td></tr>
@@ -467,7 +477,8 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Load the font from a file in memory. </p>
-<p>The supported font formats are: TrueType, Type 1, CFF, OpenType, SFNT, X11 PCF, Windows FNT, BDF, PFR and Type 42. Warning: SFML cannot preload all the font data in this function, so the buffer pointed by <em>data</em> has to remain valid as long as the font is used.</p>
+<p>The supported font formats are: TrueType, Type 1, CFF, OpenType, SFNT, X11 PCF, Windows FNT, BDF, PFR and Type 42.</p>
+<dl class="section warning"><dt>Warning</dt><dd>SFML cannot preload all the font data in this function, so the buffer pointed by <em>data</em> has to remain valid until the <a class="el" href="classsf_1_1Font.html" title="Class for loading and manipulating character fonts. ">sf::Font</a> object loads a new font or is destroyed.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Pointer to the file data in memory </td></tr>
@@ -496,6 +507,7 @@ Public Member Functions</h2></td></tr>
 
 <p>Load the font from a custom stream. </p>
 <p>The supported font formats are: TrueType, Type 1, CFF, OpenType, SFNT, X11 PCF, Windows FNT, BDF, PFR and Type 42. Warning: SFML cannot preload all the font data in this function, so the contents of <em>stream</em> have to remain valid as long as the font is used.</p>
+<dl class="section warning"><dt>Warning</dt><dd>SFML cannot preload all the font data in this function, so the stream has to remain accessible until the <a class="el" href="classsf_1_1Font.html" title="Class for loading and manipulating character fonts. ">sf::Font</a> object loads a new font or is destroyed.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stream</td><td>Source stream to read from</td></tr>

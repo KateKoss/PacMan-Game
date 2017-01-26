@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -30,6 +31,7 @@
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">Window module</div>  </div>
@@ -75,6 +77,12 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. ">Window</a> that serves as a target for OpenGL rendering.  <a href="classsf_1_1Window.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gaed947028b0698a812cad2f97bfe9caa3"><td class="memItemLeft" align="right" valign="top">typedef platform–specific&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__window.html#gaed947028b0698a812cad2f97bfe9caa3">sf::WindowHandle</a></td></tr>
+<tr class="memdesc:gaed947028b0698a812cad2f97bfe9caa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a low-level window handle type, specific to each platform.  <a href="#gaed947028b0698a812cad2f97bfe9caa3">More...</a><br /></td></tr>
+<tr class="separator:gaed947028b0698a812cad2f97bfe9caa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:ga8d7a3b8425c907a2872cb57e32cea5b8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
@@ -92,6 +100,39 @@ Enumerations</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Provides OpenGL-based windows, and abstractions for events and input handling. </p>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a class="anchor" id="gaed947028b0698a812cad2f97bfe9caa3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__window.html#gaed947028b0698a812cad2f97bfe9caa3">sf::WindowHandle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define a low-level window handle type, specific to each platform. </p>
+<table class="doxtable">
+<tr>
+<th>Platform </th><th>Type  </th></tr>
+<tr>
+<td>Windows </td><td><code>HWND</code> </td></tr>
+<tr>
+<td>Linux/FreeBSD </td><td><code>Window</code> </td></tr>
+<tr>
+<td>Mac OS X </td><td>either <code>NSWindow*</code> or <code>NSView*</code>, disguised as <code>void*</code> </td></tr>
+<tr>
+<td>iOS </td><td><code>UIWindow*</code> </td></tr>
+<tr>
+<td>Android </td><td><code>ANativeWindow*</code> </td></tr>
+</table>
+<dl class="section user"><dt>Mac OS X Specification</dt><dd></dd></dl>
+<p>On Mac OS X, a <a class="el" href="classsf_1_1Window.html" title="Window that serves as a target for OpenGL rendering. ">sf::Window</a> can be created either from an existing <code>NSWindow*</code> or an <code>NSView*</code>. When the window is created from a window, SFML will use its content view as the OpenGL area. <a class="el" href="classsf_1_1Window.html#a26368e7162229f8637c34d80ab0f138e" title="Get the OS-specific handle of the window. ">sf::Window::getSystemHandle()</a> will return the handle that was used to create the window, which is a <code>NSWindow*</code> by default. </p>
+
+<p>Definition at line <a class="el" href="WindowHandle_8hpp_source.html#l00068">68</a> of file <a class="el" href="WindowHandle_8hpp_source.html">WindowHandle.hpp</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a class="anchor" id="ga8d7a3b8425c907a2872cb57e32cea5b8"></a>
 <div class="memitem">

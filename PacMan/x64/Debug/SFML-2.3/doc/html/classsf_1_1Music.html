@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -187,7 +188,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Streamed music played from an audio file. </p>
 <p>Musics are sounds that are streamed rather than completely loaded in memory.</p>
-<p>This is especially useful for compressed musics that usually take hundreds of MB when they are uncompressed: by streaming it instead of loading it entirely, you avoid saturating the memory and have almost no loading delay.</p>
+<p>This is especially useful for compressed musics that usually take hundreds of MB when they are uncompressed: by streaming it instead of loading it entirely, you avoid saturating the memory and have almost no loading delay. This implies that the underlying resource (file, stream or memory buffer) must remain valid for the lifetime of the <a class="el" href="classsf_1_1Music.html" title="Streamed music played from an audio file. ">sf::Music</a> object.</p>
 <p>Apart from that, a <a class="el" href="classsf_1_1Music.html" title="Streamed music played from an audio file. ">sf::Music</a> has almost the same features as the <a class="el" href="classsf_1_1SoundBuffer.html" title="Storage for audio samples defining a sound. ">sf::SoundBuffer</a> / <a class="el" href="classsf_1_1Sound.html" title="Regular sound that can be played in the audio environment. ">sf::Sound</a> pair: you can play/pause/stop it, request its parameters (channels, sample rate), change the way it is played (pitch, volume, 3D position, ...), etc.</p>
 <p>As a sound stream, a music is played in its own thread in order not to block the rest of the program. This means that you can leave the music alone after calling <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a>, it will manage itself very well.</p>
 <p>Usage example: </p><div class="fragment"><div class="line"><span class="comment">// Declare a new music</span></div>
@@ -726,6 +727,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Open a music from an audio file. </p>
 <p>This function doesn't start playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Since the music is not loaded at once but rather streamed continuously, the file must remain accessible until the <a class="el" href="classsf_1_1Music.html" title="Streamed music played from an audio file. ">sf::Music</a> object loads a new music or is destroyed.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>Path of the music file to open</td></tr>
@@ -762,7 +764,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open a music from an audio file in memory. </p>
-<p>This function doesn't start playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats. Since the music is not loaded completely but rather streamed continuously, the <em>data</em> must remain available as long as the music is playing (i.e. you can't deallocate it right after calling this function).</p>
+<p>This function doesn't start playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Since the music is not loaded at once but rather streamed continuously, the <em>data</em> buffer must remain accessible until the <a class="el" href="classsf_1_1Music.html" title="Streamed music played from an audio file. ">sf::Music</a> object loads a new music or is destroyed. That is, you can't deallocate the buffer right after calling this function.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Pointer to the file data in memory </td></tr>
@@ -790,7 +793,8 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Open a music from an audio file in a custom stream. </p>
-<p>This function doesn't start playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats. Since the music is not loaded completely but rather streamed continuously, the <em>stream</em> must remain alive as long as the music is playing (i.e. you can't destroy it right after calling this function).</p>
+<p>This function doesn't start playing the music (call <a class="el" href="classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. ">play()</a> to do so). See the documentation of <a class="el" href="classsf_1_1InputSoundFile.html" title="Provide read access to sound files. ">sf::InputSoundFile</a> for the list of supported formats.</p>
+<dl class="section warning"><dt>Warning</dt><dd>Since the music is not loaded at once but rather streamed continuously, the <em>stream</em> must remain accessible until the <a class="el" href="classsf_1_1Music.html" title="Streamed music played from an audio file. ">sf::Music</a> object loads a new music or is destroyed.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">stream</td><td>Source stream to read from</td></tr>
@@ -1229,7 +1233,7 @@ of the listener") is an invalid value and is forbidden. The default value of the
 
 <p>OpenAL source identifier. </p>
 
-<p>Definition at line <a class="el" href="SoundSource_8hpp_source.html#l00264">264</a> of file <a class="el" href="SoundSource_8hpp_source.html">SoundSource.hpp</a>.</p>
+<p>Definition at line <a class="el" href="SoundSource_8hpp_source.html#l00274">274</a> of file <a class="el" href="SoundSource_8hpp_source.html">SoundSource.hpp</a>.</p>
 
 </div>
 </div>

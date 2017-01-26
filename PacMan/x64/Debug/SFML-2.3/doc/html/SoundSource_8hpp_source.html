@@ -12,7 +12,7 @@
     <body>
         <div id="banner-container">
             <div id="banner">
-                <span id="sfml">SFML 2.3.0</span>
+                <span id="sfml">SFML 2.4.1</span>
             </div>
         </div>
         <div id="content">
@@ -22,6 +22,7 @@
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="modules.html"><span>Modules</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
     </ul>
@@ -43,7 +44,7 @@
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// SFML - Simple and Fast Multimedia Library</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Copyright (C) 2007-2015 Laurent Gomila (laurent@sfml-dev.org)</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// Copyright (C) 2007-2016 Laurent Gomila (laurent@sfml-dev.org)</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// This software is provided &#39;as-is&#39;, without any express or implied warranty.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// In no event will the authors be held liable for any damages arising from the use of this software.</span></div>
@@ -115,27 +116,29 @@
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">float</span> getAttenuation() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="classsf_1_1SoundSource.html">SoundSource</a>();</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="classsf_1_1SoundSource.html">SoundSource</a>&amp; operator =(<span class="keyword">const</span> <a class="code" href="classsf_1_1SoundSource.html">SoundSource</a>&amp; right);</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    Status getStatus() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="comment">// Member data</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="classsf_1_1SoundSource.html#a0223cef4b1c587e6e1e17b4c92c4479c">  264</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classsf_1_1SoundSource.html#a0223cef4b1c587e6e1e17b4c92c4479c">m_source</a>; </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;};</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;} <span class="comment">// namespace sf</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">#endif // SFML_SOUNDSOURCE_HPP</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="classsf_1_1SoundSource.html">SoundSource</a>();</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    Status getStatus() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="comment">// Member data</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="classsf_1_1SoundSource.html#a0223cef4b1c587e6e1e17b4c92c4479c">  274</a></span>&#160;<span class="comment"></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classsf_1_1SoundSource.html#a0223cef4b1c587e6e1e17b4c92c4479c">m_source</a>; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;};</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;} <span class="comment">// namespace sf</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">#endif // SFML_SOUNDSOURCE_HPP</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;</div>
 <div class="ttc" id="classsf_1_1AlResource_html"><div class="ttname"><a href="classsf_1_1AlResource.html">sf::AlResource</a></div><div class="ttdoc">Base class for classes that require an OpenAL context. </div><div class="ttdef"><b>Definition:</b> <a href="AlResource_8hpp_source.html#l00040">AlResource.hpp:40</a></div></div>
 <div class="ttc" id="classsf_1_1SoundSource_html_ac43af72c98c077500b239bc75b812f03adabb01e8aa85b2f54b344890addf764a"><div class="ttname"><a href="classsf_1_1SoundSource.html#ac43af72c98c077500b239bc75b812f03adabb01e8aa85b2f54b344890addf764a">sf::SoundSource::Stopped</a></div><div class="ttdoc">Sound is not playing. </div><div class="ttdef"><b>Definition:</b> <a href="SoundSource_8hpp_source.html#l00052">SoundSource.hpp:52</a></div></div>
 <div class="ttc" id="classsf_1_1Vector3_html"><div class="ttname"><a href="classsf_1_1Vector3.html">sf::Vector3</a></div><div class="ttdoc">Utility template class for manipulating 3-dimensional vectors. </div><div class="ttdef"><b>Definition:</b> <a href="Vector3_8hpp_source.html#l00037">Vector3.hpp:37</a></div></div>
 <div class="ttc" id="classsf_1_1SoundSource_html_ac43af72c98c077500b239bc75b812f03ac3ca1fcc0394267c9bdbe3dc0a8a7e41"><div class="ttname"><a href="classsf_1_1SoundSource.html#ac43af72c98c077500b239bc75b812f03ac3ca1fcc0394267c9bdbe3dc0a8a7e41">sf::SoundSource::Paused</a></div><div class="ttdoc">Sound is paused. </div><div class="ttdef"><b>Definition:</b> <a href="SoundSource_8hpp_source.html#l00053">SoundSource.hpp:53</a></div></div>
-<div class="ttc" id="classsf_1_1SoundSource_html_a0223cef4b1c587e6e1e17b4c92c4479c"><div class="ttname"><a href="classsf_1_1SoundSource.html#a0223cef4b1c587e6e1e17b4c92c4479c">sf::SoundSource::m_source</a></div><div class="ttdeci">unsigned int m_source</div><div class="ttdoc">OpenAL source identifier. </div><div class="ttdef"><b>Definition:</b> <a href="SoundSource_8hpp_source.html#l00264">SoundSource.hpp:264</a></div></div>
+<div class="ttc" id="classsf_1_1SoundSource_html_a0223cef4b1c587e6e1e17b4c92c4479c"><div class="ttname"><a href="classsf_1_1SoundSource.html#a0223cef4b1c587e6e1e17b4c92c4479c">sf::SoundSource::m_source</a></div><div class="ttdeci">unsigned int m_source</div><div class="ttdoc">OpenAL source identifier. </div><div class="ttdef"><b>Definition:</b> <a href="SoundSource_8hpp_source.html#l00274">SoundSource.hpp:274</a></div></div>
 <div class="ttc" id="namespacesf_html"><div class="ttname"><a href="namespacesf.html">sf</a></div><div class="ttdef"><b>Definition:</b> <a href="AlResource_8hpp_source.html#l00034">AlResource.hpp:34</a></div></div>
 <div class="ttc" id="classsf_1_1SoundSource_html_ac43af72c98c077500b239bc75b812f03"><div class="ttname"><a href="classsf_1_1SoundSource.html#ac43af72c98c077500b239bc75b812f03">sf::SoundSource::Status</a></div><div class="ttdeci">Status</div><div class="ttdoc">Enumeration of the sound source states. </div><div class="ttdef"><b>Definition:</b> <a href="SoundSource_8hpp_source.html#l00050">SoundSource.hpp:50</a></div></div>
 <div class="ttc" id="classsf_1_1SoundSource_html"><div class="ttname"><a href="classsf_1_1SoundSource.html">sf::SoundSource</a></div><div class="ttdoc">Base class defining a sound&#39;s properties. </div><div class="ttdef"><b>Definition:</b> <a href="SoundSource_8hpp_source.html#l00042">SoundSource.hpp:42</a></div></div>
